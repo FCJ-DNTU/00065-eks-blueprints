@@ -15,7 +15,7 @@ You can refer to more about how to create [GitHub Personal Access Token](https:/
 
 1.  After creating **GitHub Personal Access Token**
     
-    *   We return to **Cloud9 environment**
+    *   We return to **VSCode Terminal**
     *   Create **Secret in Secrets Manager** with the name **eks-workshop-token**
 
 ```
@@ -24,7 +24,7 @@ aws secretsmanager create-secret --name "eks-workshop-token" --description "gith
 
 Note: remember to replace your **secret-string** with the token you created.
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0006.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/001-accesscluster.png?featherlight=false&width=90pc)
 
 2.  We can create a new **CodePipelineStack** resource by creating a new **CDK Construct** in the **lib/** directory, then importing **Construct** into the main entry point file.
     
@@ -33,8 +33,8 @@ Note: remember to replace your **secret-string** with the token you created.
 ```
 touch lib/pipeline.ts
 ```
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/002-accesscluster.png?featherlight=false&width=90pc)
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0007.png?featherlight=false&width=90pc)
 
 3.  Once the file is created, open the file and add the following code to create **pipeline construct**
 
@@ -43,20 +43,26 @@ touch lib/pipeline.ts
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
 
 export default class PipelineConstruct extends Construct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
     const account = props?.env?.account!;
     const region = props?.env?.region!;
 
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns()
-    .teams();
-  
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: 'auto'
+        })
+      )
+      .addOns()
+      .teams();
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -78,7 +84,8 @@ Make configuration:
 *   **credentialsSecretName**, enter your secret (In the lab, enter **eks-workshop-token**)
 *   **targetRevision**, enter revision **main**
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0008.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/003-accesscluster.png?featherlight=false&width=90pc)
+
 
 4.  To make sure we can access **Construct**, we need to import and initialize a new construct.
     
@@ -86,10 +93,13 @@ Make configuration:
 
 ```
 // bin/my-eks-blueprints.ts
+// bin/my-eks-blueprints.ts
 import * as cdk from 'aws-cdk-lib';
 import ClusterConstruct from '../lib/my-eks-blueprints-stack';
+import * as dotenv from 'dotenv';
 import PipelineConstruct from '../lib/pipeline'; // IMPORT OUR PIPELINE CONSTRUCT
 
+dotenv.config();
 
 const app = new cdk.App();
 const account = process.env.CDK_DEFAULT_ACCOUNT!;
@@ -100,15 +110,14 @@ new ClusterConstruct(app, 'cluster', { env });
 new PipelineConstruct(app, 'pipeline', { env });
 ```
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0009.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/004-accesscluster.png?featherlight=false&width=90pc)
 
 5.  Do a list check **pipeline**
 
 ```
 cdk list
 ```
-
-![Deployment Pipeline](/images/5-Deploymentpipeline/00010.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)
 
 6.  Do more **Stage**. In this step, we add stages to the pipeline (in the lab using the **dev** stage, you can deploy more stages for **test** and **production** in regions. other)
 
@@ -117,20 +126,26 @@ cdk list
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
 
 export default class PipelineConstruct extends Construct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
     const account = props?.env?.account!;
     const region = props?.env?.region!;
 
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns()
-    .teams();
-  
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: 'auto'
+        })
+      )
+      .addOns()
+      .teams();
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -143,10 +158,10 @@ export default class PipelineConstruct extends Construct {
       .wave({
         id: "envs",
         stages: [
-          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1')}
+          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1') }
         ]
       })
-      .build(scope, id+'-stack', props);
+      .build(scope, id + '-stack', props);
   }
 }
 ```
@@ -162,7 +177,7 @@ export default class PipelineConstruct extends Construct {
 *   Our stack will deploy the following clusters: EKS in the dev environment. CodePipeline deploys to the region: ap-southeast-1.
     
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00011.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/006-accesscluster.png?featherlight=false&width=90pc)
 
 7.  Perform pipeline list recheck
 
@@ -178,4 +193,4 @@ pipeline-stack
 pipeline-stack/dev/dev-blueprint
 ```
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00012.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)

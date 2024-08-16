@@ -22,12 +22,17 @@ Deploy a sample application as a deployment. Scale deployment to 50. Scaling eve
 kubectl get nodes
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0001.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/001-testingcluster.png?featherlight=false&width=90pc)
 
 2.  Make sample nginx application
-
+Create a directory and a file named nginx.yaml:
 ```
-cat <<EoF> ~/environment/nginx.yaml
+mkdir -p /home/ec2-user/environment
+sudo vi /home/ec2-user/environment/nginx.yaml
+```
+
+Copy the following content into the nginx.yaml file:
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -53,12 +58,14 @@ spec:
           requests:
             cpu: 500m
             memory: 512Mi
-EoF
+```
 
+Finally, apply the nginx.yaml file:
+```
 kubectl apply -f ~/environment/nginx.yaml
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0002.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/002-testingcluster.png?featherlight=false&width=90pc)
 
 3.  Check the pod is running
 
@@ -66,7 +73,7 @@ kubectl apply -f ~/environment/nginx.yaml
 kubectl get pod -l app=nginx
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0003.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/003-testingcluster.png?featherlight=false&width=90pc)
 
 4.  Implement **Scale deployment replicas**
 
@@ -76,7 +83,7 @@ kubectl get pod -l app=nginx
 kubectl scale --replicas=10 deployment/nginx-to-scaleout
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0004.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/004-testingcluster.png?featherlight=false&width=90pc)
 
 5.  Next we do **Monitoring the scaling event**
 
@@ -86,7 +93,7 @@ kubectl scale --replicas=10 deployment/nginx-to-scaleout
 kubectl get pods -l app=nginx -o wide --watch
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0005.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/005-testingcluster.png?featherlight=false&width=90pc)
 
 6.  To view the cluster-autoscaler log
 
@@ -94,7 +101,7 @@ kubectl get pods -l app=nginx -o wide --watch
 kubectl -n kube-system logs -f deployment/blueprints-addon-cluster-autoscaler-aws-cluster-autoscaler
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0006.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/006-testingcluster.png?featherlight=false&width=90pc)
 
 7.  You can list all the nodes
 
@@ -102,7 +109,7 @@ kubectl -n kube-system logs -f deployment/blueprints-addon-cluster-autoscaler-aw
 kubectl get nodes
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0007.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/007-testingcluster.png?featherlight=false&width=90pc)
 
 8.  To delete the execution resource
 
@@ -111,4 +118,4 @@ kubectl delete deploy nginx-to-scaleout
 rm ~/environment/nginx.yaml
 ```
 
-![Add-ons](/images/7.2-Testingcluster/0008.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/008-testingcluster.png?featherlight=false&width=90pc)

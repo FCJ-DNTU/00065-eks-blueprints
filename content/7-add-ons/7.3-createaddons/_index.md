@@ -13,7 +13,7 @@ pre : " <b> 7.3 </b> "
 touch lib/kubevious_addon.ts
 ```
 
-![Add-ons](/images/7.3-Createaddons/0001.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/001-createaddons.png?featherlight=false&width=90pc)
 
 2.  Add the following code to the **kubevious\_addon.ts** file
 
@@ -83,7 +83,7 @@ function populateValues(helmOptions: KubeviousAddOnProps): blueprints.Values {
 }
 ```
 
-![Add-ons](/images/7.3-Createaddons/0002.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/002-createaddons.png?featherlight=false&width=90pc)
 
 3.  Then add the following code to **lib/pipeline.ts**
 
@@ -127,7 +127,7 @@ export default class PipelineConstruct extends Construct {
 }
 ```
 
-![Add-ons](/images/7.3-Createaddons/0003.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/003-createaddons.png?featherlight=false&width=90pc)
 
 4.  Do push to Github repository
 
@@ -137,11 +137,11 @@ git commit -m "adding Kubevious"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
 
-![Add-ons](/images/7.3-Createaddons/0004.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/004-createaddons.png?featherlight=false&width=90pc)
 
 5.  Wait 15 minutes to complete
 
-![Add-ons](/images/7.3-Createaddons/0005.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/005-createaddons.png?featherlight=false&width=90pc)
 
 6.  Once the pipeline is complete, we can see our add-ons in action by running the command below:
 
@@ -149,33 +149,5 @@ git push https://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@github.com/AWS-First-C
 kubectl port-forward $(kubectl get pods -n kubevious -l "app.kubernetes.io/component=kubevious-ui" -o jsonpath="{.items[0].metadata.name}") 8080:80 -n kubevious
 ```
 
-![Add-ons](/images/7.3-Createaddons/0006.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/006-createaddons.png?featherlight=false&width=90pc)
 
-7.  In the **Cloud9** interface
-
-*   Select **Preview**
-*   Select **Preview Running Application**
-
-![Add-ons](/images/7.3-Createaddons/0007.png?featherlight=false&width=90pc)
-
-8.  The interface appears
-
-*   Click on the right root icon to expand
-
-![Add-ons](/images/7.3-Createaddons/0008.png?featherlight=false&width=90pc)
-
-9.  Extensible Interface
-
-![Add-ons](/images/7.3-Createaddons/0009.png?featherlight=false&width=90pc)
-
-10.  Conduct discovery
-
-![Add-ons](/images/7.3-Createaddons/00010.png?featherlight=false&width=90pc)
-
-11.  Only use the interface on the browser **Desktop**
-
-![Add-ons](/images/7.3-Createaddons/00011.png?featherlight=false&width=90pc)
-
-12.  Detailed interface of **kubevious**
-
-![Add-ons](/images/7.3-Createaddons/00012.png?featherlight=false&width=90pc)

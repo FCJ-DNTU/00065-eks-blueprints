@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create CDK project :: AWS System Manager</title>
+    <title>Create CDK Project :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1723370491" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723370491" rel="stylesheet">
-    <link href="/css/hybrid.css?1723370491" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723370491" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723370491" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723370491" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723370491" rel="stylesheet">
-    <link href="/css/theme.css?1723370491" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723370491" rel="stylesheet">
+    <link href="/css/nucleus.css?1723810619" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1723810619" rel="stylesheet">
+    <link href="/css/hybrid.css?1723810619" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1723810619" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1723810619" rel="stylesheet">
+    <link href="/css/auto-complete.css?1723810619" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1723810619" rel="stylesheet">
+    <link href="/css/theme.css?1723810619" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1723810619" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1723370491" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1723810619" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723370491"></script>
+    <script src="/js/jquery-3.3.1.min.js?1723810619"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723370491"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723370491"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1723810619"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1723810619"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723370491"></script>
+<script type="text/javascript" src="/js/search.js?1723810619"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createworkspace/" title="Create workspace" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createvpcec2/" title="Create VPC và EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createworkspace/">
-           <b> 2.1 </b> Create workspace
+      <a href="/2-prerequiste/2.1-createvpcec2/">
+           <b> 2.1 </b> Create VPC và EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-installtool/" title="Install Tool" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.2-connectec2/" title="Connect SSH from Visual Studio Code to EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.2-installtool/">
-           <b> 2.2 </b> Install Tool
+      <a href="/2-prerequiste/2.2-connectec2/">
+           <b> 2.2 </b> Connect SSH from Visual Studio Code to EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.3-createiamrole/" title="Create IAM role" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.3-installtool/" title="Tool Installation" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.3-createiamrole/">
-           <b> 2.3 </b> Create IAM role
+      <a href="/2-prerequiste/2.3-installtool/">
+           <b> 2.3 </b> Tool Installation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.4-attachrole/" title="Assign IAM role" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.4-createrole/" title="Create IAM Role" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.4-attachrole/">
-           <b> 2.4 </b> Assign IAM role
+      <a href="/2-prerequiste/2.4-createrole/">
+           <b> 2.4 </b> Create IAM Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,13 +251,41 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.5-updateiamrole/" title="Install Tool" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.5-attachrole/" title="Attach IAM role" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.5-updateiamrole/">
-           <b> 2.5 </b> Install Tool
+      <a href="/2-prerequiste/2.5-attachrole/">
+           <b> 2.5 </b> Attach IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.6-updaterole/" title="Update IAM Role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.6-updaterole/">
+           <b> 2.6 </b> Update IAM Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -312,13 +340,13 @@
  
   
     
-    <li data-nav-id="/4-createcdkproject/" title="Create CDK project" class="dd-item 
+    <li data-nav-id="/4-createcdkproject/" title="Create CDK Project" class="dd-item 
         
         active
         
         ">
       <a href="/4-createcdkproject/">
-           <b> 4. </b> Create CDK project
+           <b> 4. </b> Create CDK Project
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1009,7 +1037,7 @@
             
           
           
-            <a href='/'>Session Management</a> > Create CDK project
+            <a href='/'>Session Management</a> > Create CDK Project
           
         
           
@@ -1044,7 +1072,7 @@
           
             <h1>
               
-              Create CDK project
+              Create CDK Project
             </h1>
           
 
@@ -1052,73 +1080,83 @@
 
 
 
-	<h4 id="create-cdk-project">Create CDK project</h4>
+	<h4 id="create-cdk-project">Create CDK Project</h4>
 <ol>
-<li>Change the path to <strong>main repo</strong> and make a new <strong>CDK project</strong> using <strong>typescript</strong></li>
+<li><strong>Change the directory to the main repo and install nvm</strong></li>
 </ol>
-<pre tabindex="0"><code>cd ~/environment/my-eks-blueprints
-cdk init app --language typescript
-</code></pre><p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/00011.png?featherlight=false&width=90pc"></p>
+<pre tabindex="0"><code>cd my-eks-blueprints
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR=&#34;$([ -z &#34;${XDG_CONFIG_HOME-}&#34; ] &amp;&amp; printf %s &#34;${HOME}/.nvm&#34; || printf %s &#34;${XDG_CONFIG_HOME}/nvm&#34;)&#34;
+[ -s &#34;$NVM_DIR/nvm.sh&#34; ] &amp;&amp; \. &#34;$NVM_DIR/nvm.sh&#34;
+source ~/.bashrc
+nvm -v
+</code></pre><p><img alt="Create Workspace" src="/images/4-createcdkproject/001-createcdkproject.png?featherlight=false&width=90pc"></p>
 <ol start="2">
-<li>
-<p>In the <strong>Cloud9 environment</strong> interface</p>
+<li><strong>Use Node.js version 18</strong></li>
+</ol>
+<pre tabindex="0"><code>nvm install v18
+nvm use v18
+node -v
+npm -v
+</code></pre><p><img alt="Create Workspace" src="/images/4-createcdkproject/003-createcdkproject.png?featherlight=false&width=90pc"></p>
+
+<div class="notices note" ><p>You need to use Node.js version 14.15.0 or higher to use CDK. For more information, see <a href="https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html">here</a>
+<img alt="Create Workspace" src="/images/4-createcdkproject/002-createcdkproject.png?featherlight=false&width=90pc"></p>
+</div>
+
+<ol start="3">
+<li><strong>Install TypeScript and CDK version 2.147.3</strong></li>
+</ol>
+<pre tabindex="0"><code>npm -g install typescript
+npm install -g aws-cdk@2.147.3
+cdk --version
+</code></pre><p><img alt="Create Workspace" src="/images/4-createcdkproject/005-createcdkproject.png?featherlight=false&width=90pc"></p>
+<ol start="4">
+<li><strong>Initialize a new CDK project using TypeScript</strong></li>
+</ol>
+<pre tabindex="0"><code>cdk init app --language typescript
+</code></pre><p><img alt="Create Workspace" src="/images/4-createcdkproject/006-createcdkproject.png?featherlight=false&width=90pc"></p>
+<ol start="5">
+<li><strong>In the VSCode interface</strong>
 <ul>
-<li>View sidebar</li>
-<li>View structure of <strong>project</strong></li>
-<li><strong>lib /</strong> : This is where your stack or <strong>construct</strong> <strong>CDK projects</strong> are defined.</li>
-<li><strong>bin / my-eks-blueprints.ts</strong> : This is the <strong>entrypoint</strong> of the CDK project. It will load the constructs defined in <strong>lib /</strong> .</li>
+<li>View the sidebar</li>
+<li>Examine the structure of the project</li>
+<li><strong>lib/</strong>: This is where the stacks or constructs of your CDK project are defined.
+<img alt="Create Workspace" src="/images/4-createcdkproject/012-createcdkproject.png?featherlight=false&width=90pc"></li>
+<li><strong>bin/my-eks-blueprints.ts</strong>: This is the entry point of the CDK project. It will load the constructs defined in <strong>lib/</strong>.
+<img alt="Create Workspace" src="/images/4-createcdkproject/013-createcdkproject.png?featherlight=false&width=90pc"></li>
 </ul>
 </li>
 </ol>
-<p>You can see more documentation on <strong><a href="https://docs.aws.amazon.com/cdk/v2/guide/best-practices.html">CDK</a></strong></p>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/00012.png?featherlight=false&width=90pc"></p>
-<ol start="3">
-<li>Validate <strong>AWS_DEFAULT_REGION</strong> and <strong>ACCOUNT_ID</strong></li>
+
+<div class="notices note" ><p>You can read more about <a href="https://docs.aws.amazon.com/cdk/v2/guide/best-practices.html">CDK</a>.</p>
+</div>
+
+<ol start="6">
+<li><strong>Set the AWS_DEFAULT_REGION and ACCOUNT_ID</strong></li>
 </ol>
 <pre tabindex="0"><code>export AWS_DEFAULT_REGION=ap-southeast-1
 export ACCOUNT_ID=212454837823
-</code></pre><ul>
-<li>Note: remember to change your <strong>ACCOUNT_ID</strong> to perform the lab.</li>
-</ul>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/00013.png?featherlight=false&width=90pc"></p>
-<ol start="4">
-<li>
-<p>We initialize <strong>Boostrap account</strong></p>
-<ul>
-<li>To <strong>bootstrapping</strong> we execute the command.</li>
-</ul>
-</li>
+</code></pre>
+<div class="notices note" ><p>Note: Remember to replace ACCOUNT_ID with your actual ID for the lab.</p>
+</div>
+
+<p><img alt="Create Workspace" src="/images/4-createcdkproject/007-createcdkproject.png?featherlight=false&width=90pc"></p>
+<ol start="7">
+<li><strong>Initialize the bootstrap account</strong></li>
 </ol>
+<p>To perform bootstrapping, run:</p>
 <pre tabindex="0"><code>cdk bootstrap --trust=$ACCOUNT_ID \
   --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
   aws://$ACCOUNT_ID/$AWS_REGION
-</code></pre><ul>
-<li>When executing <strong>bootstrap</strong> successfully, the following will appear:</li>
-</ul>
+</code></pre><p>On successful bootstrapping, you will see:</p>
 <pre tabindex="0"><code>Environment aws://212454837823/ap-southeast-1 bootstrapped.
-</code></pre><p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/00014.png?featherlight=false&width=90pc"></p>
-<ol start="5">
-<li>
-<p>Install dependencies.</p>
-<ul>
-<li>The dependencies need to be updated, open the file <strong>package.json</strong> and change the version of <strong>typescript</strong> to **4.6.</li>
-<li>Then do reinstall the <strong>package</strong></li>
-</ul>
-</li>
+</code></pre><p><img alt="Create Workspace" src="/images/4-createcdkproject/010-createcdkproject.png?featherlight=false&width=90pc"></p>
+<ol start="8">
+<li><strong>Install the eks-blueprints and dotenv modules for the project</strong></li>
 </ol>
-<pre tabindex="0"><code>rm -rf node_modules
-npm i
-</code></pre><p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/00015.png?featherlight=false&width=90pc"></p>
-<ol start="6">
-<li>
-<p>After reinstalling the correct version</p>
-<ul>
-<li>We continue to run the command to install the <strong>eks-blueprints</strong> module for <strong>project</strong></li>
-</ul>
-</li>
-</ol>
-<pre tabindex="0"><code>npm i @aws-quickstart/eks-blueprints
-</code></pre><p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/00016.png?featherlight=false&width=90pc"></p>
+<pre tabindex="0"><code>npm i @aws-quickstart/eks-blueprints dotenv
+</code></pre><p><img alt="Create Workspace" src="/images/4-createcdkproject/011-createcdkproject.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1187,6 +1225,22 @@ npm i
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1625,19 +1679,19 @@ npm i
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723370491"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723370491"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723370491"></script>
-    <script src="/js/jquery.sticky.js?1723370491"></script>
-    <script src="/js/featherlight.min.js?1723370491"></script>
-    <script src="/js/highlight.pack.js?1723370491"></script>
+    <script src="/js/clipboard.min.js?1723810619"></script>
+    <script src="/js/perfect-scrollbar.min.js?1723810619"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1723810619"></script>
+    <script src="/js/jquery.sticky.js?1723810619"></script>
+    <script src="/js/featherlight.min.js?1723810619"></script>
+    <script src="/js/highlight.pack.js?1723810619"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723370491"></script>
-    <script src="/js/learn.js?1723370491"></script>
-    <script src="/js/hugo-learn.js?1723370491"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1723810619"></script>
+    <script src="/js/learn.js?1723810619"></script>
+    <script src="/js/hugo-learn.js?1723810619"></script>
 
-    <link href="/mermaid/mermaid.css?1723370491" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723370491"></script>
+    <link href="/mermaid/mermaid.css?1723810619" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1723810619"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

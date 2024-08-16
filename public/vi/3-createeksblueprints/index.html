@@ -12,21 +12,21 @@
     <title>Tạo EKS Blueprints :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1723370048" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723370048" rel="stylesheet">
-    <link href="/css/hybrid.css?1723370048" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723370048" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723370048" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723370048" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723370048" rel="stylesheet">
-    <link href="/css/theme.css?1723370048" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723370048" rel="stylesheet">
+    <link href="/css/nucleus.css?1723806895" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1723806895" rel="stylesheet">
+    <link href="/css/hybrid.css?1723806895" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1723806895" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1723806895" rel="stylesheet">
+    <link href="/css/auto-complete.css?1723806895" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1723806895" rel="stylesheet">
+    <link href="/css/theme.css?1723806895" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1723806895" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1723370048" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1723806895" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723370048"></script>
+    <script src="/js/jquery-3.3.1.min.js?1723806895"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723370048"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723370048"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1723806895"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1723806895"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723370048"></script>
+<script type="text/javascript" src="/js/search.js?1723806895"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createworkspace/" title="Chuẩn bị VPC và EC2" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createvpcec2/" title="Tạo VPC và EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createworkspace/">
-           <b> 2.1 </b> Chuẩn bị VPC và EC2
+      <a href="/vi/2-prerequiste/2.1-createvpcec2/">
+           <b> 2.1 </b> Tạo VPC và EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,125 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-installtool/" title="Tạo IAM Role" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.2-connectec2/" title="Kết nối SSH từ Visual Studio Code đến EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-installtool/">
-           <b> 2.2 </b> Tạo IAM Role
+      <a href="/vi/2-prerequiste/2.2-connectec2/">
+           <b> 2.2 </b> Kết nối SSH từ Visual Studio Code đến EC2 Instance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.3-installtool/" title="Cài đặt Tool" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.3-installtool/">
+           <b> 2.3 </b> Cài đặt Tool
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-createrole/" title="Tạo IAM role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-createrole/">
+           <b> 2.4 </b> Tạo IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.5-attachrole/" title="Gán IAM role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.5-attachrole/">
+           <b> 2.5 </b> Gán IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.6-updaterole/" title="Cập nhật IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.6-updaterole/">
+           <b> 2.6 </b> Cập nhật IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -369,13 +481,13 @@
  
   
     
-    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="" class="dd-item 
+    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="Truy cập Cluster" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-deploymentpipeline/5.4-accessingthecluster/">
-           <b> 5.4 </b> 
+           <b> 5.4 </b> Truy cập Cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -679,13 +791,13 @@
  
   
     
-    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu add-ons" class="dd-item 
+    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu ArgoCD" class="dd-item 
         
         
         
         ">
       <a href="/vi/8-deploy/8.1-argocd/">
-           <b> 7.1 </b> Giới thiệu add-ons
+           <b> 8.1 </b> Giới thiệu ArgoCD
           
             <i class="fas fa-check read-icon"></i>
           
@@ -980,7 +1092,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0001.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/3-createeksblueprints/001-createeksblueprints.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Sau khi tạo <strong>repository</strong> thành công</p>
@@ -989,21 +1101,21 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0002.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/3-createeksblueprints/002-createeksblueprints.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>
 <p>Trong giao diện <strong>Github</strong> chúng ta sẽ cài đặt và tạo <strong>token</strong></p>
 <ul>
 <li>Chọn vào <strong>Avatar</strong> của tài khoản <strong>Github</strong> của bạn</li>
-<li>Chọn <strong>Settings</strong></li>
+<li>Chọn <strong>Settings</strong>
+<img alt="Create Workspace" src="/images/3-createeksblueprints/003-createeksblueprints.png?featherlight=false&width=90pc"></li>
 </ul>
 </li>
+<li>
+<p>Sau đó, kéo xuống và chọn <strong>Developer settings</strong></p>
+</li>
 </ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0003.png?featherlight=false&width=90pc"></p>
-<ol start="4">
-<li>Sau đó, kéo xuống và chọn <strong>Developer settings</strong></li>
-</ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0004.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/3-createeksblueprints/004-createeksblueprints.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>
 <p>Trong giao diện <strong>Developer settings</strong></p>
@@ -1013,22 +1125,22 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0005.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/3-createeksblueprints/005-createeksblueprints.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>
-<p>Trong giao diện <strong>Generate new toke</strong></p>
+<p>Trong giao diện <strong>Generate new token</strong></p>
 <ul>
-<li><strong>Note</strong>, nhập <strong><code>eks-workshop-toke</code></strong></li>
+<li><strong>Note</strong>, nhập <strong><code>eks-workshop-token</code></strong></li>
 <li>Chọn các <strong>scope</strong> sau: <strong>repo</strong> và <strong>admin:repo_hook</strong></li>
 <li>Chọn <strong>Generate token</strong></li>
 </ul>
 </li>
 </ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0006.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/3-createeksblueprints/006-createeksblueprints.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Chọn <strong>Generate token</strong></li>
 </ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0007.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/3-createeksblueprints/007-createeksblueprints.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Hoàn thành <strong>Generate token</strong></p>
@@ -1037,18 +1149,19 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0008.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/3-createeksblueprints/008-createeksblueprints.png?featherlight=false&width=90pc"></p>
 <p>Tham khảo cách tạo <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Personal Access Token</a></p>
 <ol start="9">
+<li>Tải git</li>
+</ol>
+<pre tabindex="0"><code>sudo dnf install git -y
+git --version
+</code></pre><p><img alt="Create Workspace" src="/images/3-createeksblueprints/009-createeksblueprints.png?featherlight=false&width=90pc"></p>
+<ol start="10">
 <li>Thực hiện clone <strong>repository</strong></li>
 </ol>
 <pre tabindex="0"><code>git clone https://github.com/&lt;your-alias&gt;/my-eks-blueprints.git
-</code></pre><p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/0009.png?featherlight=false&width=90pc"></p>
-<ol start="10">
-<li>Thay đổi đường dẫn thư mục.</li>
-</ol>
-<pre tabindex="0"><code>cd ~/environment/my-eks-blueprints
-</code></pre><p><img alt="Create EKS Blueprints" src="/images/3-CreateEKSBlueprints/00010.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="Create Workspace" src="/images/3-createeksblueprints/010-createeksblueprints.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1150,6 +1263,70 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1494,7 +1671,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-prerequiste/2.2-installtool/" title="Tạo IAM Role"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/2-prerequiste/2.6-updaterole/" title="Cập nhật IAM"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/4-createcdkproject/" title="Tạo CDK project" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1507,19 +1684,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723370048"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723370048"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723370048"></script>
-    <script src="/js/jquery.sticky.js?1723370048"></script>
-    <script src="/js/featherlight.min.js?1723370048"></script>
-    <script src="/js/highlight.pack.js?1723370048"></script>
+    <script src="/js/clipboard.min.js?1723806895"></script>
+    <script src="/js/perfect-scrollbar.min.js?1723806895"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1723806895"></script>
+    <script src="/js/jquery.sticky.js?1723806895"></script>
+    <script src="/js/featherlight.min.js?1723806895"></script>
+    <script src="/js/highlight.pack.js?1723806895"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723370048"></script>
-    <script src="/js/learn.js?1723370048"></script>
-    <script src="/js/hugo-learn.js?1723370048"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1723806895"></script>
+    <script src="/js/learn.js?1723806895"></script>
+    <script src="/js/hugo-learn.js?1723806895"></script>
 
-    <link href="/mermaid/mermaid.css?1723370048" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723370048"></script>
+    <link href="/mermaid/mermaid.css?1723806895" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1723806895"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -18,7 +18,7 @@ Containerized environments on AWS include many open-source or AWS products and s
 
 The EKS Blueprints framework packages these tools into a cohesive whole and makes them available to development teams as a service. From an operational perspective, the framework allows companies to unify tools and best practices for securing, scaling, monitoring, and operating container infrastructure into one central platform that developers in an enterprise can use.
 
-![Create Workspace](/images/1-Introduce/0001-introduce.png?featherlight=false&width=60pc)
+![Create Workspace](/images/1-introduce/0001-introduce.png?featherlight=false&width=60pc)
 
 #### Work
 
@@ -48,4 +48,4 @@ Customers can leverage EKS Blueprints to:
     *   Multi-team deployments
     *   Custom cluster deployments
 
-![Create Workspace](/images/1-Introduce/0003-introduce.png?featherlight=false&width=60pc)
+![Create Workspace](/images/1-introduce/0003-introduce.png?featherlight=false&width=60pc)

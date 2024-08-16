@@ -14,7 +14,7 @@ pre : " <b> 7.3 </b> "
 touch lib/kubevious_addon.ts
 ```
 
-![Add-ons](/images/7.3-Createaddons/0001.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/001-createaddons.png?featherlight=false&width=90pc)
 
 2.  Thêm đoạn code sau vào file **kubevious\_addon.ts**
 
@@ -84,7 +84,7 @@ function populateValues(helmOptions: KubeviousAddOnProps): blueprints.Values {
 }
 ```
 
-![Add-ons](/images/7.3-Createaddons/0002.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/002-createaddons.png?featherlight=false&width=90pc)
 
 3.  Sau đó thêm đoạn code sau vào **lib/pipeline.ts**
 
@@ -128,7 +128,7 @@ export default class PipelineConstruct extends Construct {
 }
 ```
 
-![Add-ons](/images/7.3-Createaddons/0003.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/003-createaddons.png?featherlight=false&width=90pc)
 
 4.  Thực hiện push lên Github repository
 
@@ -137,12 +137,11 @@ git add .
 git commit -m "adding Kubevious"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
-
-![Add-ons](/images/7.3-Createaddons/0004.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/004-createaddons.png?featherlight=false&width=90pc)
 
 5.  Đợi 15 phút sau sẽ hoàn thành
 
-![Add-ons](/images/7.3-Createaddons/0005.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/005-createaddons.png?featherlight=false&width=90pc)
 
 6.  Khi pipeline hoàn tất, chúng ta có thể thấy add-ons của mình đang hoạt động bằng cách chạy lệnh bên dưới:
 
@@ -150,33 +149,4 @@ git push https://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@github.com/AWS-First-C
 kubectl port-forward $(kubectl get pods -n kubevious -l "app.kubernetes.io/component=kubevious-ui" -o jsonpath="{.items[0].metadata.name}") 8080:80 -n kubevious  
 ```
 
-![Add-ons](/images/7.3-Createaddons/0006.png?featherlight=false&width=90pc)
-
-7.  Trong giao diện **Cloud9**
-
-*   Chọn **Preview**
-*   Chọn **Preview Running Application**
-
-![Add-ons](/images/7.3-Createaddons/0007.png?featherlight=false&width=90pc)
-
-8.  Giao diện xuất hiện
-
-*   Chọn vào biểu tượng gốc phải để mở rộng
-
-![Add-ons](/images/7.3-Createaddons/0008.png?featherlight=false&width=90pc)
-
-9.  Giao diện mở rộng
-
-![Add-ons](/images/7.3-Createaddons/0009.png?featherlight=false&width=90pc)
-
-10.  Tiến hành khám phá
-
-![Add-ons](/images/7.3-Createaddons/00010.png?featherlight=false&width=90pc)
-
-11.  Chỉ sử dụng giao diện trên trình duyệt **Desktop**
-
-![Add-ons](/images/7.3-Createaddons/00011.png?featherlight=false&width=90pc)
-
-12.  Giao diện chi tiết của **kubevious**
-
-![Add-ons](/images/7.3-Createaddons/00012.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.3-createaddons/006-createaddons.png?featherlight=false&width=90pc)

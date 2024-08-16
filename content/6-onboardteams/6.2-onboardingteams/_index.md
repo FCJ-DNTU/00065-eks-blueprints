@@ -15,24 +15,30 @@ pre : " <b> 6.2 </b> "
 ```
 // lib/pipeline.ts
 import * as cdk from 'aws-cdk-lib';
-import * as blueprints from '@aws-quickstart/eks-blueprints';
 import { Construct } from 'constructs';
+import * as blueprints from '@aws-quickstart/eks-blueprints';
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
 
 import { TeamPlatform, TeamApplication } from '../teams'; // HERE WE IMPORT TEAMS
 
 export default class PipelineConstruct extends Construct {
-  constructor(scope: Construct: string, props?: cdk.StackProps){
-    super(scope,id)
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
     const account = props?.env?.account!;
     const region = props?.env?.region!;
-    
+
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns()
-    .teams(new TeamPlatform(account), new TeamApplication('burnham',account));
-  
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: 'auto',
+        })
+      )
+      .addOns()
+      .teams(new TeamPlatform(account), new TeamApplication('burnham',account)); // HERE WE USE TEAMS
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -44,15 +50,15 @@ export default class PipelineConstruct extends Construct {
       .wave({
         id: "envs",
         stages: [
-          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1')}
+          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1') }
         ]
       })
-      .build(scope, id+'-stack', props);
+      .build(scope, id + '-stack', props);
   }
 }
 ```
 
-![Onboarding Teams](/images/6.2-OnboardingTeams/0001.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/001-onboardingteams.png?featherlight=false&width=90pc)
 
 2.  Push changes to remote repository Github
 
@@ -63,13 +69,16 @@ git commit -m "adding teams"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
 
-![Onboarding Teams](/images/6.2-OnboardingTeams/0002.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/002-onboardingteams.png?featherlight=false&width=90pc)
 
 3.  Wait about 15 minutes for **Succeeded**
 
-![Onboarding Teams](/images/6.2-OnboardingTeams/0003.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/003-onboardingteams.png?featherlight=false&width=90pc)
 
-4.  Perform test
+4.  Successfully deployed
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/004-onboardingteams.png?featherlight=false&width=90pc)
+
+5.  Perform test
 
 ```
 kubectl get ns
@@ -77,4 +86,4 @@ kubectl get ns
 
 *   You will notice that **team-burnham** is in **namespace**
 
-![Onboarding Teams](/images/6.2-OnboardingTeams/0004.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/005-onboardingteams.png?featherlight=false&width=90pc)

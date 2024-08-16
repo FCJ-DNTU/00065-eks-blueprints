@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Giới thiệu add-ons :: AWS System Manager</title>
+    <title>Giới thiệu ArgoCD :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1723369148" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723369148" rel="stylesheet">
-    <link href="/css/hybrid.css?1723369148" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723369148" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723369148" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723369148" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723369148" rel="stylesheet">
-    <link href="/css/theme.css?1723369148" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723369148" rel="stylesheet">
+    <link href="/css/nucleus.css?1723809266" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1723809266" rel="stylesheet">
+    <link href="/css/hybrid.css?1723809266" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1723809266" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1723809266" rel="stylesheet">
+    <link href="/css/auto-complete.css?1723809266" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1723809266" rel="stylesheet">
+    <link href="/css/theme.css?1723809266" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1723809266" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1723369148" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1723809266" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723369148"></script>
+    <script src="/js/jquery-3.3.1.min.js?1723809266"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723369148"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723369148"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1723809266"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1723809266"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723369148"></script>
+<script type="text/javascript" src="/js/search.js?1723809266"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createworkspace/" title="Chuẩn bị VPC và EC2" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createvpcec2/" title="Tạo VPC và EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createworkspace/">
-           <b> 2.1 </b> Chuẩn bị VPC và EC2
+      <a href="/vi/2-prerequiste/2.1-createvpcec2/">
+           <b> 2.1 </b> Tạo VPC và EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,125 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-installtool/" title="Tạo IAM Role" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.2-connectec2/" title="Kết nối SSH từ Visual Studio Code đến EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-installtool/">
-           <b> 2.2 </b> Tạo IAM Role
+      <a href="/vi/2-prerequiste/2.2-connectec2/">
+           <b> 2.2 </b> Kết nối SSH từ Visual Studio Code đến EC2 Instance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.3-installtool/" title="Cài đặt Tool" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.3-installtool/">
+           <b> 2.3 </b> Cài đặt Tool
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-createrole/" title="Tạo IAM role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-createrole/">
+           <b> 2.4 </b> Tạo IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.5-attachrole/" title="Gán IAM role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.5-attachrole/">
+           <b> 2.5 </b> Gán IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.6-updaterole/" title="Cập nhật IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.6-updaterole/">
+           <b> 2.6 </b> Cập nhật IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -202,278 +314,18 @@
  
   
     
-    <li data-nav-id="/vi/3-createeksblueprints/" title="Tạo kết nối đến máy chủ EC2" class="dd-item 
+    <li data-nav-id="/vi/3-createeksblueprints/" title="Tạo EKS Blueprints" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-createeksblueprints/">
-           <b> 3. </b> Tạo kết nối đến máy chủ EC2
+           <b> 3. </b> Tạo EKS Blueprints
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.1-public-instance/" title="Kết nối đến máy chủ Public" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.1-public-instance/">
-           <b> 3.1. </b> Kết nối đến máy chủ Public
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.2-private-instance/" title="Tạo kết nối đến máy chủ EC2 Private" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.2-private-instance/">
-           <b> 3.2. </b> Tạo kết nối đến máy chủ EC2 Private
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.2-private-instance/3.2.1-enablevpcdns/" title="Kích hoạt DNS hostnames" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.2-private-instance/3.2.1-enablevpcdns/">
-           <b> 3.2.1 </b> Kích hoạt DNS hostnames
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/" title="Tạo VPC Endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/">
-           <b> 3.2.2 </b> Tạo VPC Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Tạo Endpoint ssm" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
-           <b> 3.2.2.1 </b> Tạo Endpoint ssm
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Tạo Endpoint ssmmessages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
-           <b> 3.2.2.2 </b> Tạo Endpoint ssmmessages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Tạo Endpoint ec2messages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
-           <b> 3.2.2.3 </b> Tạo Endpoint ec2messages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createeksblueprints/3.2-private-instance/3.2.3-connectec2/" title="Kết nối EC2 Private" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createeksblueprints/3.2-private-instance/3.2.3-connectec2/">
-           <b> 3.2.3 </b> Kết nối EC2 Private
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -488,142 +340,18 @@
  
   
     
-    <li data-nav-id="/vi/4-createcdkproject/" title="Quản lý session logs" class="dd-item 
+    <li data-nav-id="/vi/4-createcdkproject/" title="Tạo CDK project" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-createcdkproject/">
-           <b> 4. </b> Quản lý session logs
+           <b> 4. </b> Tạo CDK project
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-createcdkproject/4.1-updateiamrole/" title="Cập nhật IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-createcdkproject/4.1-updateiamrole/">
-           <b> 4.1 </b> Cập nhật IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-createcdkproject/4.2-creates3bucket/" title="Tạo S3 Bucket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-createcdkproject/4.2-creates3bucket/">
-           <b> 4.2 </b> Tạo S3 Bucket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-createcdkproject/4.3-creategwes3/" title="Tạo S3 Gateway endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-createcdkproject/4.3-creategwes3/">
-           <b> 4.3 </b> Tạo S3 Gateway endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-createcdkproject/4.4-configsessionlogs/" title="Theo dõi session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-createcdkproject/4.4-configsessionlogs/">
-           <b> 4.4 </b> Theo dõi session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -669,13 +397,13 @@
  
   
     
-    <li data-nav-id="/vi/5-deploymentpipeline/5.1-createacluster/" title="" class="dd-item 
+    <li data-nav-id="/vi/5-deploymentpipeline/5.1-createacluster/" title="Tạo Cluster" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-deploymentpipeline/5.1-createacluster/">
-           <b> 5.1 </b> 
+           <b> 5.1 </b> Tạo Cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -697,13 +425,13 @@
  
   
     
-    <li data-nav-id="/vi/5-deploymentpipeline/5.2-accesscluster/" title="" class="dd-item 
+    <li data-nav-id="/vi/5-deploymentpipeline/5.2-accesscluster/" title="Tạo Pipeline" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-deploymentpipeline/5.2-accesscluster/">
-           <b> 5.1 </b> 
+           <b> 5.2 </b> Tạo Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -725,13 +453,13 @@
  
   
     
-    <li data-nav-id="/vi/5-deploymentpipeline/5.3-pipelineinaction/" title="" class="dd-item 
+    <li data-nav-id="/vi/5-deploymentpipeline/5.3-pipelineinaction/" title="Pipeline in Action" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-deploymentpipeline/5.3-pipelineinaction/">
-           <b> 5.1 </b> 
+           <b> 5.3 </b> Pipeline in Action
           
             <i class="fas fa-check read-icon"></i>
           
@@ -753,13 +481,13 @@
  
   
     
-    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="" class="dd-item 
+    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="Truy cập Cluster" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-deploymentpipeline/5.4-accessingthecluster/">
-           <b> 5.1 </b> 
+           <b> 5.4 </b> Truy cập Cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1063,13 +791,13 @@
  
   
     
-    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu add-ons" class="dd-item 
+    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu ArgoCD" class="dd-item 
         
         active
         
         ">
       <a href="/vi/8-deploy/8.1-argocd/">
-           <b> 7.1 </b> Giới thiệu add-ons
+           <b> 8.1 </b> Giới thiệu ArgoCD
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1313,7 +1041,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/8-deploy/'>Triển khai Workload với ArgoCD</a> > Giới thiệu add-ons
+            <a href='/vi/'>Session Management</a> > <a href='/vi/8-deploy/'>Triển khai Workload với ArgoCD</a> > Giới thiệu ArgoCD
           
         
           
@@ -1326,7 +1054,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1342,7 +1078,7 @@
           
             <h1>
               
-              Giới thiệu add-ons
+              Giới thiệu ArgoCD
             </h1>
           
 
@@ -1350,63 +1086,43 @@
 
 
 
-	<ol>
-<li>Thêm một add-on vào template đơn giản như thêm phương thức <strong>.addOns</strong> vào <strong>blueprints.EksBlueprint.builder()</strong>. Chúng ta sẽ sử dụng Cluster Autoscaler làm ví dụ để cho thấy việc <strong>add-ons</strong> sử dụng EKS Blueprint đơn giản như thế nào. Thêm <strong>Cluster Autoscaler</strong> vào template <strong>lib/pipeline.ts</strong> của bạn như được hiển thị bên dưới:</li>
-</ol>
-<pre tabindex="0"><code>// lib/pipeline.ts
-import * as cdk from &#39;aws-cdk-lib&#39;;
-import { Construct } from &#39;constructs&#39;;
-import * as blueprints from &#39;@aws-quickstart/eks-blueprints&#39;;
-
-import { TeamPlatform, TeamApplication } from &#39;../teams&#39;; 
-
-export default class PipelineConstruct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
-    
-    const account = props?.env?.account!;
-    const region = props?.env?.region!;
-
-    const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns(new blueprints.ClusterAutoScalerAddOn) // Cluster Autoscaler addon goes here
-    .teams(new TeamPlatform(account), new TeamApplication(&#39;burnham&#39;,account));
-  
-    blueprints.CodePipelineStack.builder()
-      .name(&#34;eks-blueprints-workshop-pipeline&#34;)
-      .owner(&#34;your-github-username&#34;)
-      .repository({
-          repoUrl: &#39;your-repo-name&#39;,
-          credentialsSecretName: &#39;github-token&#39;,
-          targetRevision: &#39;main&#39;
-      })
-      .wave({
-        id: &#34;envs&#34;,
-        stages: [
-          { id: &#34;dev&#34;, stackBuilder: blueprint.clone(&#39;ap-southeast-1&#39;)}
-        ]
-      })
-      .build(scope, id+&#39;-stack&#39;, props);
-  }
-}
-</code></pre><p><img alt="Add-ons" src="/images/7.1-Addons/0001.png?featherlight=false&width=90pc"></p>
-<ol start="2">
-<li>Nếu bạn chưa quen với Cluster Autoscaler, đây là một công cụ tự động điều chỉnh số lượng node trong cluster của bạn khi các pod bị lỗi do không đủ tài nguyên hoặc các pod được lên lịch lại cho các node khác do không được sử dụng hết trong một khoảng thời gian dài. Push các thay đổi của bạn vào repo GitHub của bạn để bắt đầu quy trình.</li>
-</ol>
-<pre tabindex="0"><code>git add .
-git commit -m &#34;adding CA&#34;
-git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
-</code></pre><p><img alt="Add-ons" src="/images/7.1-Addons/0002.png?featherlight=false&width=90pc"></p>
-<ol start="3">
-<li>Đợi khoảng 15 phút sẽ hoàn thành.</li>
-</ol>
-<p><img alt="Add-ons" src="/images/7.1-Addons/0003.png?featherlight=false&width=90pc"></p>
-<ol start="4">
-<li>Sau đó, chạy lệnh sau để kiểm tra <strong>Cluster Autoscaler</strong> đang chạy</li>
-</ol>
-<pre tabindex="0"><code>kubectl get pods -n kube-system
-</code></pre><p><img alt="Add-ons" src="/images/7.1-Addons/0004.png?featherlight=false&width=90pc"></p>
+	<h4 id="giới-thiệu-argocd">Giới thiệu ArgoCD</h4>
+<p>Bước tiếp theo là sử dụng ArgoCD để tăng workload của nhóm chúng ta. Có hai cách để tận dụng ArgoCD với EKS Blueprints:</p>
+<ul>
+<li>
+<p>Tích hợp workload onboarding thủ công bằng ArgoCD CLI và hiển thị ArgoCD server cục bộ để có quyền truy cập vào bảng điều khiển</p>
+</li>
+<li>
+<p>Tận dụng bootstrapping tự động để tự động hóa việc tích hợp workload của bạn.</p>
+</li>
+<li>
+<p>CD Argo là một công cụ phân phối liên tục, mang tính khai báo GitOps cho Kubernetes. Các điều khoản bổ sung Argo CD vào một cluster EKS và có thể tùy chọn khởi động khối lượng công việc của bạn từ các kho lưu trữ Git công khai và riêng tư.</p>
+</li>
+<li>
+<p>Tiện ích bổ sung Argo CD cho phép quản trị viên nền tảng kết hợp cung cấp cluster và khởi động khối lượng công việc trong một bước duy nhất và cho phép các trường hợp sử dụng như sao chép một cluster sản xuất đang chạy hiện có ở một khu vực khác trong vài phút. Điều này rất quan trọng đối với tính liên tục của hoạt động kinh doanh và các trường hợp khắc phục thảm họa cũng như tính khả dụng giữa các khu vực và mở rộng địa lý.</p>
+</li>
+</ul>
+<h4 id="argocd-cho-eks-blueprints">ArgoCD cho EKS Blueprints</h4>
+<p>ArgoCD phù hợp tốt với các nguyên tắc xác định đề xuất giá trị của việc sử dụng Bản thiết kế EKS, bao gồm:</p>
+<ul>
+<li>Các định nghĩa, cấu hình và môi trường ứng dụng phải được khai báo và kiểm soát phiên bản</li>
+<li>Việc triển khai ứng dụng và quản lý vòng đời phải được tự động hóa, có thể kiểm tra được và dễ hiểu</li>
+<li>Tuân theo mô hình GitOps sử dụng kho lưu trữ Git như một chân lý để xác định trạng thái ứng dụng mong muốn của bạn</li>
+<li>Tính linh hoạt về cách Kubernetes biểu hiện được xác định và quản lý</li>
+<li>Argo CD tự động hóa việc triển khai các trạng thái ứng dụng mong muốn trong các môi trường đích được chỉ định. Việc triển khai ứng dụng có thể theo dõi các bản cập nhật cho các nhánh, thẻ hoặc được ghim vào một phiên bản tệp kê khai cụ thể tại một cam kết Git.</li>
+</ul>
+<p><img alt="Create Workspace" src="/images/8-deploy/8.1-argocd/001-argocd.png?featherlight=false&width=50pc"></p>
+<p>Argo CD được thực hiện như một bộ điều khiển Kubernetes liên tục theo dõi các ứng dụng đang chạy và so sánh trạng thái hiện tại, trực tiếp với trạng thái mục tiêu mong muốn (như được chỉ định trong Git repo). Ứng dụng đã triển khai có trạng thái trực tiếp lệch khỏi trạng thái đích được coi là OutOfSync. Argo CD báo cáo &amp; trực quan hóa sự khác biệt, đồng thời cung cấp các phương tiện để tự động hoặc thủ công đồng bộ hóa trạng thái trực tiếp trở lại trạng thái mục tiêu mong muốn. Bất kỳ sửa đổi nào được thực hiện đối với trạng thái mục tiêu mong muốn trong kho Git có thể được tự động áp dụng và phản ánh trong các môi trường mục tiêu được chỉ định.</p>
+<h4 id="argocd-bootstrapping">ArgoCD Bootstrapping</h4>
+<p>EKS Blueprints cung cấp cách tiếp cận bootstrap workload và add-ons từ customer GitOps repository.</p>
+<p>Bạn xem thêm tài liệu <a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern">Cluster Bootstrapping</a></p>
+<p>Để cho phép bootstrapping, ArgoCD add-on cho phép chuyển một <strong>ApplicationRepository</strong> thời điểm xây dựng. Hiện tại hỗ trợ các loại repository sau:</p>
+<ul>
+<li>Public HTTP/HTTPS repository (ví dụ: GitHub)</li>
+<li>Git repository truy cập Private HTTPS yêu cầu xác thực tên người dùng / mật khẩu.</li>
+<li>Private git repository với quyền truy cập SSH yêu cầu SSH key để xác thực.</li>
+<li>GitHub repository có thể truy cập Private HTTPS có thể truy cập được bằng GitHub token.</li>
+</ul>
 
 
 
@@ -1508,24 +1224,6 @@ git push https://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@github.com/AWS-First-C
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
                         
             
             
@@ -1541,52 +1239,6 @@ git push https://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@github.com/AWS-First-C
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
                     
                         
             
@@ -1655,27 +1307,6 @@ git push https://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@github.com/AWS-First-C
             
         
                     
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
                         
             
             
@@ -1688,57 +1319,6 @@ git push https://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@github.com/AWS-First-C
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -2066,19 +1646,19 @@ git push https://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@github.com/AWS-First-C
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723369148"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723369148"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723369148"></script>
-    <script src="/js/jquery.sticky.js?1723369148"></script>
-    <script src="/js/featherlight.min.js?1723369148"></script>
-    <script src="/js/highlight.pack.js?1723369148"></script>
+    <script src="/js/clipboard.min.js?1723809266"></script>
+    <script src="/js/perfect-scrollbar.min.js?1723809266"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1723809266"></script>
+    <script src="/js/jquery.sticky.js?1723809266"></script>
+    <script src="/js/featherlight.min.js?1723809266"></script>
+    <script src="/js/highlight.pack.js?1723809266"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723369148"></script>
-    <script src="/js/learn.js?1723369148"></script>
-    <script src="/js/hugo-learn.js?1723369148"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1723809266"></script>
+    <script src="/js/learn.js?1723809266"></script>
+    <script src="/js/hugo-learn.js?1723809266"></script>
 
-    <link href="/mermaid/mermaid.css?1723369148" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723369148"></script>
+    <link href="/mermaid/mermaid.css?1723809266" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1723809266"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

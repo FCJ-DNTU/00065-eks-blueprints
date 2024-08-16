@@ -2,43 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-createcdkproject/4.1-updateiamrole/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-createcdkproject/4.1-updateiamrole/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-createcdkproject/4.1-updateiamrole/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/2-prerequiste/2.1-createworkspace/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.1-createworkspace/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.1-createworkspace/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -49,42 +12,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1-introduce/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.1-public-instance/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.1-public-instance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.1-public-instance/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.1-enablevpcdns/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.2-private-instance/3.2.1-enablevpcdns/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.1-enablevpcdns/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/7-add-ons/7.1-intro/</loc>
@@ -99,16 +26,76 @@
                 href="//localhost:1313/vi/7-add-ons/7.1-intro/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/7-add-ons/</loc>
+    <loc>//localhost:1313/vi/8-deploy/8.1-argocd/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-add-ons/"
+                href="//localhost:1313/8-deploy/8.1-argocd/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-add-ons/"
+                href="//localhost:1313/vi/8-deploy/8.1-argocd/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/5-deploymentpipeline/5.1-createacluster/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-deploymentpipeline/5.1-createacluster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-deploymentpipeline/5.1-createacluster/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.1-createvpcec2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.1-createvpcec2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.1-createvpcec2/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-onboardteams/6.1-definingteams/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-onboardteams/6.1-definingteams/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-onboardteams/6.1-definingteams/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/8-deploy/8.2-deploy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/8-deploy/8.2-deploy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/8-deploy/8.2-deploy/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/</loc>
@@ -123,88 +110,112 @@
                 href="//localhost:1313/vi/2-prerequiste/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/</loc>
+    <loc>//localhost:1313/vi/6-onboardteams/6.2-onboardingteams/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
+                href="//localhost:1313/6-onboardteams/6.2-onboardingteams/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
+                href="//localhost:1313/vi/6-onboardteams/6.2-onboardingteams/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-prerequiste/2.2-installtool/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-connectec2/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.2-installtool/"
+                href="//localhost:1313/2-prerequiste/2.2-connectec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.2-installtool/"
+                href="//localhost:1313/vi/2-prerequiste/2.2-connectec2/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/</loc>
+    <loc>//localhost:1313/vi/7-add-ons/7.2-testingcluster/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.2-private-instance/"
+                href="//localhost:1313/7-add-ons/7.2-testingcluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/"
+                href="//localhost:1313/vi/7-add-ons/7.2-testingcluster/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-createcdkproject/4.2-creates3bucket/</loc>
+    <loc>//localhost:1313/vi/5-deploymentpipeline/5.2-accesscluster/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-createcdkproject/4.2-creates3bucket/"
+                href="//localhost:1313/5-deploymentpipeline/5.2-accesscluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-createcdkproject/4.2-creates3bucket/"
+                href="//localhost:1313/vi/5-deploymentpipeline/5.2-accesscluster/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/2.3-installtool/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/"
+                href="//localhost:1313/2-prerequiste/2.3-installtool/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/"
+                href="//localhost:1313/vi/2-prerequiste/2.3-installtool/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.3-connectec2/</loc>
+    <loc>//localhost:1313/vi/5-deploymentpipeline/5.3-pipelineinaction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.2-private-instance/3.2.3-connectec2/"
+                href="//localhost:1313/5-deploymentpipeline/5.3-pipelineinaction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.3-connectec2/"
+                href="//localhost:1313/vi/5-deploymentpipeline/5.3-pipelineinaction/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/</loc>
+    <loc>//localhost:1313/vi/8-deploy/8.3-manage/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
+                href="//localhost:1313/8-deploy/8.3-manage/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createeksblueprints/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
+                href="//localhost:1313/vi/8-deploy/8.3-manage/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-onboardteams/6.3-clusteraccessforteams/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-onboardteams/6.3-clusteraccessforteams/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-onboardteams/6.3-clusteraccessforteams/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/7-add-ons/7.3-createaddons/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-add-ons/7.3-createaddons/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-add-ons/7.3-createaddons/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/3-createeksblueprints/</loc>
@@ -219,18 +230,6 @@
                 href="//localhost:1313/vi/3-createeksblueprints/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-createcdkproject/4.3-creategwes3/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-createcdkproject/4.3-creategwes3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-createcdkproject/4.3-creategwes3/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/4-createcdkproject/</loc>
     <xhtml:link
                 rel="alternate"
@@ -243,16 +242,40 @@
                 href="//localhost:1313/vi/4-createcdkproject/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-createcdkproject/4.4-configsessionlogs/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/2.4-createrole/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-createcdkproject/4.4-configsessionlogs/"
+                href="//localhost:1313/2-prerequiste/2.4-createrole/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-createcdkproject/4.4-configsessionlogs/"
+                href="//localhost:1313/vi/2-prerequiste/2.4-createrole/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/5-deploymentpipeline/5.4-accessingthecluster/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-deploymentpipeline/5.4-accessingthecluster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-deploymentpipeline/5.4-accessingthecluster/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.5-attachrole/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.5-attachrole/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.5-attachrole/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/5-deploymentpipeline/</loc>
@@ -267,8 +290,19 @@
                 href="//localhost:1313/vi/5-deploymentpipeline/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.6-updaterole/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.6-updaterole/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.6-updaterole/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/6-onboardteams/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -280,8 +314,31 @@
                 href="//localhost:1313/vi/6-onboardteams/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/7-add-ons/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-add-ons/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-add-ons/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/8-deploy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/8-deploy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/8-deploy/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/9-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

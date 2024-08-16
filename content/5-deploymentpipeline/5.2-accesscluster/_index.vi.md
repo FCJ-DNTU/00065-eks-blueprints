@@ -15,7 +15,7 @@ Bạn có thể tham khảo thêm về cách tạo [GitHub Personal Access Token
 
 1.  Sau khi tạo **GitHub Personal Access Token**
     
-    *   Chúng ta quay lại **Cloud9 environment**
+    *   Chúng ta quay lại **VSCode Terminal**
     *   Thực hiện tạo **Secret trong Secrets Manager** với tên **eks-workshop-token**
 
 ```
@@ -24,7 +24,7 @@ aws secretsmanager create-secret --name "eks-workshop-token" --description "gith
 
 Lưu ý: nhớ thay **secret-string** của bạn bằng token bạn đã tạo.
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0006.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/001-accesscluster.png?featherlight=false&width=90pc)
 
 2.  Chúng ta có thể tạo một tài nguyên **CodePipelineStack** mới bằng cách tạo một **CDK Construct** mới trong thư mục **lib/**, sau đó nhập **Construct** vào main entrypoint file.
     
@@ -34,7 +34,7 @@ Lưu ý: nhớ thay **secret-string** của bạn bằng token bạn đã tạo.
 touch lib/pipeline.ts
 ```
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0007.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/002-accesscluster.png?featherlight=false&width=90pc)
 
 3.  Sau khi tệp được tạo, hãy mở tệp và thêm đoạn mã sau để tạo **pipeline construct**
 
@@ -43,20 +43,26 @@ touch lib/pipeline.ts
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
 
 export default class PipelineConstruct extends Construct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
     const account = props?.env?.account!;
     const region = props?.env?.region!;
 
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns()
-    .teams();
-  
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: 'auto'
+        })
+      )
+      .addOns()
+      .teams();
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -78,7 +84,7 @@ Thực hiện cấu hình:
 *   **credentialsSecretName**, nhập secret của bạn (Trong bài lab, nhập **eks-workshop-token**)
 *   **targetRevision**, nhập revision **main**
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0008.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/003-accesscluster.png?featherlight=false&width=90pc)
 
 4.  Để đảm bảo chúng ta có thể truy cập vào **Construct**, chúng ta cần import và khởi tạo một construct mới.
     
@@ -86,10 +92,13 @@ Thực hiện cấu hình:
 
 ```
 // bin/my-eks-blueprints.ts
+// bin/my-eks-blueprints.ts
 import * as cdk from 'aws-cdk-lib';
 import ClusterConstruct from '../lib/my-eks-blueprints-stack';
+import * as dotenv from 'dotenv';
 import PipelineConstruct from '../lib/pipeline'; // IMPORT OUR PIPELINE CONSTRUCT
 
+dotenv.config();
 
 const app = new cdk.App();
 const account = process.env.CDK_DEFAULT_ACCOUNT!;
@@ -100,7 +109,7 @@ new ClusterConstruct(app, 'cluster', { env });
 new PipelineConstruct(app, 'pipeline', { env });
 ```
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/0009.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/004-accesscluster.png?featherlight=false&width=90pc)
 
 5.  Thực hiện kiểm tra danh sách **pipeline**
 
@@ -108,7 +117,7 @@ new PipelineConstruct(app, 'pipeline', { env });
 cdk list
 ```
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00010.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)
 
 6.  Thực hiện thêm **Stage**. Trong bước này, chúng ta thực hiện thêm các stage cho pipeline( trong bài lab sử dụng stage **dev**, bạn có thể triển khai thêm các stage dành cho **test** và **production** ở các region khác)
 
@@ -117,20 +126,26 @@ cdk list
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
 
 export default class PipelineConstruct extends Construct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
     const account = props?.env?.account!;
     const region = props?.env?.region!;
 
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns()
-    .teams();
-  
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: 'auto'
+        })
+      )
+      .addOns()
+      .teams();
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -143,10 +158,10 @@ export default class PipelineConstruct extends Construct {
       .wave({
         id: "envs",
         stages: [
-          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1')}
+          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1') }
         ]
       })
-      .build(scope, id+'-stack', props);
+      .build(scope, id + '-stack', props);
   }
 }
 ```
@@ -162,7 +177,7 @@ export default class PipelineConstruct extends Construct {
 *   Stack của chúng ta sẽ triển khai các cluster sau: EKS trong môi trường dev. CodePipeline triển khai tới region: ap-southeast-1.
     
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00011.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/006-accesscluster.png?featherlight=false&width=90pc)
 
 7.  Thực hiện kiểm tra lại danh sách pipeline
 
@@ -178,4 +193,4 @@ pipeline-stack
 pipeline-stack/dev/dev-blueprint
 ```
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00012.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)

@@ -13,22 +13,27 @@ pre : " <b> 7.1 </b> "
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
+import { TeamApplication, TeamPlatform } from '../teams';
 
-import { TeamPlatform, TeamApplication } from '../teams'; 
+export default class PipelineConstruct extends Construct {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
-export default class PipelineConstruct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
-    
     const account = props?.env?.account!;
     const region = props?.env?.region!;
 
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns(new blueprints.ClusterAutoScalerAddOn) // Cluster Autoscaler addon goes here
-    .teams(new TeamPlatform(account), new TeamApplication('burnham',account));
-  
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: 'auto',
+        })
+      )
+      .addOns(new blueprints.ClusterAutoScalerAddOn) // Cluster Autoscaler addon goes here
+      .teams(new TeamPlatform(account), new TeamApplication('burnham', account));
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -40,10 +45,10 @@ export default class PipelineConstruct {
       .wave({
         id: "envs",
         stages: [
-          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1')}
+          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1') }
         ]
       })
-      .build(scope, id+'-stack', props);
+      .build(scope, id + '-stack', props);
   }
 }
 ```
@@ -58,11 +63,11 @@ git commit -m "adding CA"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
 
-![Add-ons](/images/7.1-Addons/0002.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.1-intro/002-intro.png?featherlight=false&width=90pc)
 
 3.  Đợi khoảng 15 phút sẽ hoàn thành.
 
-![Add-ons](/images/7.1-Addons/0003.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.1-intro/003-intro.png?featherlight=false&width=90pc)
 
 4.  Sau đó, chạy lệnh sau để kiểm tra **Cluster Autoscaler** đang chạy
 
@@ -70,5 +75,4 @@ git push https://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@github.com/AWS-First-C
 kubectl get pods -n kube-system
 ```
 
-![Add-ons](/images/7.1-Addons/0004.png?featherlight=false&width=90pc)
-
+![Add-ons](/images/7-add-ons/7.1-intro/004-intro.png?featherlight=false&width=90pc)

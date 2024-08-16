@@ -12,22 +12,27 @@ pre : " <b> 7.1 </b> "
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
+import { TeamApplication, TeamPlatform } from '../teams';
 
-import { TeamPlatform, TeamApplication } from '../teams'; 
+export default class PipelineConstruct extends Construct {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
-export default class PipelineConstruct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
-    
     const account = props?.env?.account!;
     const region = props?.env?.region!;
 
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns(new blueprints.ClusterAutoScalerAddOn) // Cluster Autoscaler addon goes here
-    .teams(new TeamPlatform(account), new TeamApplication('burnham',account));
-  
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: KubernetesVersion.V1_29,
+        })
+      )
+      .addOns(new blueprints.ClusterAutoScalerAddOn) // Cluster Autoscaler addon goes here
+      .teams(new TeamPlatform(account), new TeamApplication('burnham', account));
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -36,18 +41,20 @@ export default class PipelineConstruct {
           credentialsSecretName: 'github-token',
           targetRevision: 'main'
       })
+      // WE ADD THE STAGES IN WAVE FROM THE PREVIOUS CODE
       .wave({
         id: "envs",
         stages: [
-          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1')}
+          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1') }
         ]
       })
-      .build(scope, id+'-stack', props);
+      .build(scope, id + '-stack', props);
   }
 }
 ```
 
-![Add-ons](/images/7.1-Addons/0001.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.1-intro/001-intro.png?featherlight=false&width=90pc)
+
 
 2.  If you are new to Cluster Autoscaler, this is a tool that automatically adjusts the number of nodes in your cluster when pods fail due to insufficient resources or pods are rescheduled to other nodes due to failure. used up over a long period. Push your changes to your GitHub repo to start the process.
 
@@ -57,11 +64,11 @@ git commit -m "adding CA"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
 
-![Add-ons](/images/7.1-Addons/0002.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.1-intro/002-intro.png?featherlight=false&width=90pc)
 
 3.  Wait about 15 minutes to complete.
 
-![Add-ons](/images/7.1-Addons/0003.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.1-intro/003-intro.png?featherlight=false&width=90pc)
 
 4.  Then run the following command to check **Cluster Autoscaler** is running
 
@@ -69,4 +76,4 @@ git push https://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@github.com/AWS-First-C
 kubectl get pods -n kube-system
 ```
 
-![Add-ons](/images/7.1-Addons/0004.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.1-intro/004-intro.png?featherlight=false&width=90pc)

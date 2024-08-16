@@ -29,11 +29,11 @@ git push https://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@github.com/AWS-First-C
 
 Lưu ý: git push sử dùng kèm token theo **https://\[token\]@github.com/\[github\_name\]/\[repo\_name\].git**
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00013.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/001-pipelineinaction.png?featherlight=false&width=90pc)
 
 2.  Kiểm tra lại repository xem đã được push lên chưa?
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00014.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/002-pipelineinaction.png?featherlight=false&width=90pc)
 
 3.  Sau khi push lên repository, chúng ta thực hiện deploy pipeline stack.
 
@@ -41,24 +41,24 @@ Lưu ý: git push sử dùng kèm token theo **https://\[token\]@github.com/\[gi
 cdk deploy pipeline-stack
 ```
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00015.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/003-pipelineinaction.png?featherlight=false&width=90pc)
 
 4.  Bạn sẽ được nhắc xác nhận việc triển khai pipeline stack.
     
     *   Nhập **y** và sau đó nhấn enter.
     *   Sau khi triển khai thành công sẽ hiển thị **Stack ARN**
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00016.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/004-pipelineinaction.png?featherlight=false&width=90pc)
 
 5.  Quay lại giao diện **AWS Management Console**
 
 *   Tìm và chọn **CodePipeline**
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00017.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/005-pipelineinaction.png?featherlight=false&width=90pc)
 
 6.  Bạn sẽ quan sát thấy quá trình triển khai đang diễn ra.
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00018.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/006-pipelineinaction.png?featherlight=false&width=90pc)
 
 7.  Đợi khoảng 30 phút sau, **Pipeline** hiển thị **Succeeced**
     
@@ -67,7 +67,7 @@ cdk deploy pipeline-stack
     *   Chọn vào tên pipeline.
         
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00019.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/007-pipelineinaction.png?featherlight=false&width=90pc)
 
 8.  Xem các bước **Source** và **Build**
     
@@ -78,17 +78,32 @@ cdk deploy pipeline-stack
     *   Bất kỳ lỗi nào trong cấu hình từ repo của bạn đều có thể không thực hiện được stage này.
     *   Bạn có thể xem danh sách các lệnh được chạy trong hành động này bằng cách nhấp vào **Details** trong **actions** (bên dưới tên của nó và **AWS Codebuild**).
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00020.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/008-pipelineinaction.png?featherlight=false&width=90pc)
 
 9.  Tiếp theo là **UpdatePipeline** và **Assets**
     
     *   **UpdatePipeline** : Đây là một **extra build stage** chạy để kiểm tra pipeline có cần cập nhật hay không. Ví dụ: nếu code được thay đổi để bao gồm các stage bổ sung (ngoài production), **UpdatePipeline** sẽ chạy build và reconfigure pipeline cần thêm các stage bổ sung đó. Stage này là **Assets** cần thiết để chạy các stage.
     *   **Assets** : Đây là một loạt các build action xử lý các asset cần thiết để triển khai EKS cluster. **Asset**, trong ngữ cảnh của CDK, là các tệp cục bộ, thư mục hoặc Docker image có thể được đóng gói vào các thư viện và ứng dụng CDK. Những nội dung hoặc hiện vật này cần thiết để ứng dụng CDK của chúng ta hoạt động. Các asset này cho phép Framework hoạt động bình thường, vì chúng chứa các tham số và cấu hình được sử dụng để triển khai các tài nguyên cần thiết, tức là Cluster Provider, Kubernetes resources trong Cluster, IAM, add-ons với Helm Charts, v.v. Asset được lưu trữ trên AWS dưới dạng các Lambda Function cho các thực thi và tệp được lưu trữ **S3 Artifacts bucket**.
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00021.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/009-pipelineinaction.png?featherlight=false&width=90pc)
 
 10.  Cuối cùng là **dev** (Prepare và Deploy)
     
-    *   **Envs (our wave)**: wave là một tùy chọn triển khai cho các pipeline cung cấp nhiều stage (hoặc môi trường) song song. Vì CDK tổng hợp code thành một CloudFormation template, bạn có thể xem trong bảng điều khiển quản lý việc triển khai các stack dưới dạng mẫu CloudFormation.
+*   **Envs (our wave)**: wave là một tùy chọn triển khai cho các pipeline cung cấp nhiều stage (hoặc môi trường) song song. Vì CDK tổng hợp code thành một CloudFormation template, bạn có thể xem trong bảng điều khiển quản lý việc triển khai các stack dưới dạng mẫu CloudFormation.
 
-![Deployment Pipeline](/images/5-Deploymentpipeline/00022.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/010-pipelineinaction.png?featherlight=false&width=90pc)
+
+
+{{% notice note %}}
+Khi mà bạn bị lỗi trong quá trình chạy pipeline thì hãy nhấp vào xem chi tiết
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/013-pipelineinaction.png?featherlight=false&width=90pc)
+
+Lỗi này là số lượng hàng đợi bị giới hạn.
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/014-pipelineinaction.png?featherlight=false&height=30pc)
+
+Bạn hãy thực hiện chạy lại
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/015-pipelineinaction.png?featherlight=false&width=90pc)
+
+Và cuối cùng nó đã chạy được
+![Create Workspace](/images/5-deploymentpipeline/5.3-pipelineinaction/016-pipelineinaction.png?featherlight=false&width=90pc)
+{{% /notice %}}

@@ -16,7 +16,7 @@ Môi trường được chứa trong container trên AWS bao gồm nhiều sản
 
 EKS Blueprints framework đóng gói các công cụ này thành một tổng thể gắn kết và cung cấp chúng cho các nhóm phát triển như một dịch vụ. Từ góc độ hoạt động, khuôn khổ cho phép các công ty hợp nhất các công cụ và thực tiễn tốt nhất để bảo mật, mở rộng quy mô, giám sát và vận hành cơ sở hạ tầng container thành một nền tảng trung tâm mà sau đó các nhà phát triển trong một doanh nghiệp có thể sử dụng.
 
-![Create Workspace](/images/1-Introduce/0001-introduce.png?featherlight=false&width=60pc)
+![Create Workspace](/images/1-introduce/0001-introduce.png?featherlight=false&width=60pc)
 
 #### Hoạt động
 
@@ -48,4 +48,4 @@ Khách hàng có thể tận dụng EKS Blueprints để:
     *   Multi-team deployments
     *   Custom cluster deployments
 
-![Create Workspace](/images/1-Introduce/0003-introduce.png?featherlight=false&width=60pc)
+![Create Workspace](/images/1-introduce/0003-introduce.png?featherlight=false&width=60pc)

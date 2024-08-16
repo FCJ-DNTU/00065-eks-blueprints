@@ -61,45 +61,46 @@ blueprints.CodePipelineStack.builder()
 1.  Make changes to the file **lib/pipeline-stack.ts**
 
 ```
-// lib/pipeline-stack.ts
+// lib/pipeline.ts
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
-
-import { TeamPlatform, TeamApplication } from '../teams'; 
+import { KubernetesVersion } from 'aws-cdk-lib/aws-eks';
+import { TeamApplication, TeamPlatform } from '../teams';
 
 export default class PipelineConstruct extends Construct {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps){
-    super(scope,id)
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id)
 
     const account = props?.env?.account!;
     const region = props?.env?.region!;
-    
+
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns(
-      new blueprints.ClusterAutoScalerAddOn,
-      new blueprints.KubeviousAddOn(), 
-    ) 
-    .teams(new TeamPlatform(account), new TeamApplication('burnham',(account)));
+      .account(account)
+      .region(region)
+      .version("auto")
+      .addOns(
+        new blueprints.ClusterAutoScalerAddOn,
+        new blueprints.KubeviousAddOn(),
+      )
+      .teams(new TeamPlatform(account), new TeamApplication('burnham', account));
 
     // HERE WE ADD THE ARGOCD APP OF APPS REPO INFORMATION
     const repoUrl = 'https://github.com/aws-samples/eks-blueprints-workloads.git';
 
-    const bootstrapRepo : blueprints.ApplicationRepository = {
-        repoUrl,
-        targetRevision: 'workshop',
+    const bootstrapRepo: blueprints.ApplicationRepository = {
+      repoUrl,
+      targetRevision: 'workshop',
     }
 
     // HERE WE GENERATE THE ADDON CONFIGURATIONS
     const devBootstrapArgo = new blueprints.ArgoCDAddOn({
-        bootstrapRepo: {
-            ...bootstrapRepo,
-            path: 'envs/dev'
-        },
+      bootstrapRepo: {
+        ...bootstrapRepo,
+        path: 'envs/dev'
+      },
     });
-  
+
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
       .owner("your-github-username")
@@ -108,32 +109,34 @@ export default class PipelineConstruct extends Construct {
           credentialsSecretName: 'github-token',
           targetRevision: 'main'
       })
+      // WE ADD THE STAGES IN WAVE FROM THE PREVIOUS CODE
       .wave({
-        id: 'envs',
+        id: "envs",
         stages: [
-          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1').addOns(devBootstrapArgo)} // HERE WE ADD OUR NEW ADDON WITH THE CONFIGURED ARGO CONFIGURATIONS
+          // HERE WE ADD OUR NEW ADDON WITH THE CONFIGURED ARGO CONFIGURATIONS
+          { id: "dev", stackBuilder: blueprint.clone('ap-southeast-1').addOns(devBootstrapArgo) }
         ]
-      })  
-      .build(scope, id+'-stack', props);
+      })
+      .build(scope, id + '-stack', props);
   }
 }
 ```
 
-![Add-ons](/images/8.1-Deploy/0001.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/001-deploy.png?featherlight=false&width=90pc)
 
 2.  Thực hiện push thay đổi lên Github repository
 
 ```
-git add . 
+git add .
 git commit -m "Bootstrapping ArgoCD"
-git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
+git push https://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@github.com/FromSunNews/my-eks-blueprints.git
 ```
 
-![Add-ons](/images/8.1-Deploy/0002.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/002-deploy.png?featherlight=false&width=90pc)
 
 3.  Đợi 15 phút sau sẽ hoàn thành
 
-![Add-ons](/images/8.1-Deploy/0003.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/003-deploy.png?featherlight=false&width=90pc)
 
 4.  Thực hiện kiểm tra argocd namespace bằng lệnh.
 
@@ -141,4 +144,4 @@ git push https://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@github.com/AWS-First-C
 kubectl get ns
 ```
 
-![Add-ons](/images/8.1-Deploy/0004.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/004-deploy.png?featherlight=false&width=90pc)

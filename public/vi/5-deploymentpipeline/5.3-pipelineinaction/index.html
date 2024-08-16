@@ -12,21 +12,21 @@
     <title>Pipeline in Action :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1723370327" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723370327" rel="stylesheet">
-    <link href="/css/hybrid.css?1723370327" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723370327" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723370327" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723370327" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723370327" rel="stylesheet">
-    <link href="/css/theme.css?1723370327" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723370327" rel="stylesheet">
+    <link href="/css/nucleus.css?1723806895" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1723806895" rel="stylesheet">
+    <link href="/css/hybrid.css?1723806895" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1723806895" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1723806895" rel="stylesheet">
+    <link href="/css/auto-complete.css?1723806895" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1723806895" rel="stylesheet">
+    <link href="/css/theme.css?1723806895" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1723806895" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1723370327" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1723806895" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723370327"></script>
+    <script src="/js/jquery-3.3.1.min.js?1723806895"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723370327"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723370327"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1723806895"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1723806895"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723370327"></script>
+<script type="text/javascript" src="/js/search.js?1723806895"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createworkspace/" title="Tạo workspace" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createvpcec2/" title="Tạo VPC và EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createworkspace/">
-           <b> 2.1 </b> Tạo workspace
+      <a href="/vi/2-prerequiste/2.1-createvpcec2/">
+           <b> 2.1 </b> Tạo VPC và EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-installtool/" title="Cài đặt Tool" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.2-connectec2/" title="Kết nối SSH từ Visual Studio Code đến EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-installtool/">
-           <b> 2.2 </b> Cài đặt Tool
+      <a href="/vi/2-prerequiste/2.2-connectec2/">
+           <b> 2.2 </b> Kết nối SSH từ Visual Studio Code đến EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,12 +195,12 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createiamrole/" title="Cài đặt Tool" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-installtool/" title="Cài đặt Tool" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.3-createiamrole/">
+      <a href="/vi/2-prerequiste/2.3-installtool/">
            <b> 2.3 </b> Cài đặt Tool
           
             <i class="fas fa-check read-icon"></i>
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.4-attachrole/" title="Cài đặt Tool" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.4-createrole/" title="Tạo IAM role" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.4-attachrole/">
-           <b> 2.3 </b> Cài đặt Tool
+      <a href="/vi/2-prerequiste/2.4-createrole/">
+           <b> 2.4 </b> Tạo IAM role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,13 +251,41 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.5-updateiamrole/" title="Cài đặt Tool" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.5-attachrole/" title="Gán IAM role" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.5-updateiamrole/">
-           <b> 2.3 </b> Cài đặt Tool
+      <a href="/vi/2-prerequiste/2.5-attachrole/">
+           <b> 2.5 </b> Gán IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.6-updaterole/" title="Cập nhật IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.6-updaterole/">
+           <b> 2.6 </b> Cập nhật IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -453,13 +481,13 @@
  
   
     
-    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="" class="dd-item 
+    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="Truy cập Cluster" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-deploymentpipeline/5.4-accessingthecluster/">
-           <b> 5.4 </b> 
+           <b> 5.4 </b> Truy cập Cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -763,13 +791,13 @@
  
   
     
-    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu add-ons" class="dd-item 
+    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu ArgoCD" class="dd-item 
         
         
         
         ">
       <a href="/vi/8-deploy/8.1-argocd/">
-           <b> 7.1 </b> Giới thiệu add-ons
+           <b> 8.1 </b> Giới thiệu ArgoCD
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1080,16 +1108,16 @@ git push https://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@github.com/AWS-First-C
 </li>
 </ul>
 <p>Lưu ý: git push sử dùng kèm token theo <strong>https://[token]@github.com/[github_name]/[repo_name].git</strong></p>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00013.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/001-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Kiểm tra lại repository xem đã được push lên chưa?</li>
 </ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00014.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/002-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Sau khi push lên repository, chúng ta thực hiện deploy pipeline stack.</li>
 </ol>
 <pre tabindex="0"><code>cdk deploy pipeline-stack
-</code></pre><p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00015.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/003-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Bạn sẽ được nhắc xác nhận việc triển khai pipeline stack.</p>
@@ -1099,18 +1127,18 @@ git push https://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@github.com/AWS-First-C
 </ul>
 </li>
 </ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00016.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/004-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Quay lại giao diện <strong>AWS Management Console</strong></li>
 </ol>
 <ul>
 <li>Tìm và chọn <strong>CodePipeline</strong></li>
 </ul>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00017.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/005-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Bạn sẽ quan sát thấy quá trình triển khai đang diễn ra.</li>
 </ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00018.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/006-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>
 <p>Đợi khoảng 30 phút sau, <strong>Pipeline</strong> hiển thị <strong>Succeeced</strong></p>
@@ -1124,7 +1152,7 @@ git push https://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@github.com/AWS-First-C
 </ul>
 </li>
 </ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00019.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/007-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Xem các bước <strong>Source</strong> và <strong>Build</strong></p>
@@ -1138,7 +1166,7 @@ git push https://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@github.com/AWS-First-C
 </ul>
 </li>
 </ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00020.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/008-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>
 <p>Tiếp theo là <strong>UpdatePipeline</strong> và <strong>Assets</strong></p>
@@ -1148,13 +1176,25 @@ git push https://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@github.com/AWS-First-C
 </ul>
 </li>
 </ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00021.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/009-pipelineinaction.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Cuối cùng là <strong>dev</strong> (Prepare và Deploy)</li>
 </ol>
-<pre><code>*   **Envs (our wave)**: wave là một tùy chọn triển khai cho các pipeline cung cấp nhiều stage (hoặc môi trường) song song. Vì CDK tổng hợp code thành một CloudFormation template, bạn có thể xem trong bảng điều khiển quản lý việc triển khai các stack dưới dạng mẫu CloudFormation.
-</code></pre>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/00022.png?featherlight=false&width=90pc"></p>
+<ul>
+<li><strong>Envs (our wave)</strong>: wave là một tùy chọn triển khai cho các pipeline cung cấp nhiều stage (hoặc môi trường) song song. Vì CDK tổng hợp code thành một CloudFormation template, bạn có thể xem trong bảng điều khiển quản lý việc triển khai các stack dưới dạng mẫu CloudFormation.</li>
+</ul>
+<p><img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/010-pipelineinaction.png?featherlight=false&width=90pc"></p>
+
+<div class="notices note" ><p>Khi mà bạn bị lỗi trong quá trình chạy pipeline thì hãy nhấp vào xem chi tiết
+<img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/013-pipelineinaction.png?featherlight=false&width=90pc"></p>
+<p>Lỗi này là số lượng hàng đợi bị giới hạn.
+<img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/014-pipelineinaction.png?featherlight=false&height=30pc"></p>
+<p>Bạn hãy thực hiện chạy lại
+<img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/015-pipelineinaction.png?featherlight=false&width=90pc"></p>
+<p>Và cuối cùng nó đã chạy được
+<img alt="Create Workspace" src="/images/5-deploymentpipeline/5.3-pipelineinaction/016-pipelineinaction.png?featherlight=false&width=90pc"></p>
+</div>
+
 
 
 
@@ -1223,6 +1263,22 @@ git push https://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@github.com/AWS-First-C
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1655,7 +1711,7 @@ git push https://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@github.com/AWS-First-C
 			<a class="nav nav-prev" href="/vi/5-deploymentpipeline/5.2-accesscluster/" title="Tạo Pipeline"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="Truy cập Cluster" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1665,19 +1721,19 @@ git push https://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@github.com/AWS-First-C
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723370327"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723370327"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723370327"></script>
-    <script src="/js/jquery.sticky.js?1723370327"></script>
-    <script src="/js/featherlight.min.js?1723370327"></script>
-    <script src="/js/highlight.pack.js?1723370327"></script>
+    <script src="/js/clipboard.min.js?1723806895"></script>
+    <script src="/js/perfect-scrollbar.min.js?1723806895"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1723806895"></script>
+    <script src="/js/jquery.sticky.js?1723806895"></script>
+    <script src="/js/featherlight.min.js?1723806895"></script>
+    <script src="/js/highlight.pack.js?1723806895"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723370327"></script>
-    <script src="/js/learn.js?1723370327"></script>
-    <script src="/js/hugo-learn.js?1723370327"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1723806895"></script>
+    <script src="/js/learn.js?1723806895"></script>
+    <script src="/js/hugo-learn.js?1723806895"></script>
 
-    <link href="/mermaid/mermaid.css?1723370327" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723370327"></script>
+    <link href="/mermaid/mermaid.css?1723806895" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1723806895"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

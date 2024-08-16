@@ -1,5 +1,5 @@
 ---
-title : ""
+title : "Truy cập Cluster"
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false
@@ -16,7 +16,7 @@ export KUBE_CONFIG=$(aws cloudformation describe-stacks --stack-name dev-dev-blu
 $KUBE_CONFIG
 ```
 
-![Deployment Pipeline](/images/5.4-Accesscluster/0001.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.4-accessingthecluster/001-accessingthecluster.png?featherlight=false&width=90pc)
 
 2.  Khi kubeconfig đã được cập nhật, bạn sẽ có thể truy cập vào EKS cluster
 
@@ -24,4 +24,4 @@ $KUBE_CONFIG
 kubectl get svc
 ```
 
-![Deployment Pipeline](/images/5.4-Accesscluster/0002.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.4-accessingthecluster/002-accessingthecluster.png?featherlight=false&width=90pc)

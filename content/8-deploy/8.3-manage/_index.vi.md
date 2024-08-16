@@ -16,7 +16,7 @@ Bây giờ, chúng ta đăng nhập vào giao diện người dùng và xem các
 kubectl patch svc blueprints-addon-argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
 
-![Add-ons](/images/8.2-Manage/0001.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.3-manage/001-manage.png?featherlight=false&width=90pc)
 
 2.  Đợi 5 phút sau, LoadBalancer được tạo.
 
@@ -24,7 +24,7 @@ kubectl patch svc blueprints-addon-argocd-server -n argocd -p '{"spec": {"type":
 export ARGOCD_SERVER=`kubectl get svc blueprints-addon-argocd-server -n argocd -o json | jq --raw-output '.status.loadBalancer.ingress[0].hostname'`
 ```
 
-![Add-ons](/images/8.2-Manage/0002.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.3-manage/002-manage.png?featherlight=false&width=90pc)
 
 3.  TYPE và EXTERNAL-IP trên argo server service đã thay đổi thành LoadBalancer. Copy EXTERNAL-IP của LoadBalancer.
 
@@ -32,11 +32,11 @@ export ARGOCD_SERVER=`kubectl get svc blueprints-addon-argocd-server -n argocd -
 kubectl get svc -n argocd
 ```
 
-![Add-ons](/images/8.2-Manage/0003.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.3-manage/003-manage.png?featherlight=false&width=90pc)
 
 4.  Mở trình duyệt và dán EXTERNAL-IP của **LoadBalancer** vào.
 
-![Add-ons](/images/8.2-Manage/0004.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.3-manage/004-manage.png?featherlight=false&width=90pc)
 
 5.  Thực hiện tạo mật khẩu tự động và username là **admin**
 
@@ -44,8 +44,10 @@ kubectl get svc -n argocd
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
-![Add-ons](/images/8.2-Manage/0005.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.3-manage/005-manage.png?featherlight=false&width=90pc)
 
 6.  Sau khi đăng nhập, quan sát các workload trên ArgoCD UI
 
-![Add-ons](/images/8.2-Manage/0006.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.3-manage/006-manage.png?featherlight=false&width=90pc)
+
+![Add-ons](/images/8-deploy/8.3-manage/007-manage.png?featherlight=false&width=90pc)

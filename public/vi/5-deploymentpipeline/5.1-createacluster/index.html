@@ -12,21 +12,21 @@
     <title>Tạo Cluster :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1723370292" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723370292" rel="stylesheet">
-    <link href="/css/hybrid.css?1723370292" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723370292" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723370292" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723370292" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723370292" rel="stylesheet">
-    <link href="/css/theme.css?1723370292" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723370292" rel="stylesheet">
+    <link href="/css/nucleus.css?1723810432" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1723810432" rel="stylesheet">
+    <link href="/css/hybrid.css?1723810432" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1723810432" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1723810432" rel="stylesheet">
+    <link href="/css/auto-complete.css?1723810432" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1723810432" rel="stylesheet">
+    <link href="/css/theme.css?1723810432" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1723810432" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1723370292" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1723810432" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723370292"></script>
+    <script src="/js/jquery-3.3.1.min.js?1723810432"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723370292"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723370292"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1723810432"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1723810432"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723370292"></script>
+<script type="text/javascript" src="/js/search.js?1723810432"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createworkspace/" title="Tạo workspace" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createvpcec2/" title="Tạo VPC và EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createworkspace/">
-           <b> 2.1 </b> Tạo workspace
+      <a href="/vi/2-prerequiste/2.1-createvpcec2/">
+           <b> 2.1 </b> Tạo VPC và EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-installtool/" title="Cài đặt Tool" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.2-connectec2/" title="Kết nối SSH từ Visual Studio Code đến EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-installtool/">
-           <b> 2.2 </b> Cài đặt Tool
+      <a href="/vi/2-prerequiste/2.2-connectec2/">
+           <b> 2.2 </b> Kết nối SSH từ Visual Studio Code đến EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,97 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createiamrole/" title="Cài đặt Tool" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-installtool/" title="Cài đặt Tool" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.3-createiamrole/">
-           <b> 2.2 </b> Cài đặt Tool
+      <a href="/vi/2-prerequiste/2.3-installtool/">
+           <b> 2.3 </b> Cài đặt Tool
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-createrole/" title="Tạo IAM role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-createrole/">
+           <b> 2.4 </b> Tạo IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.5-attachrole/" title="Gán IAM role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.5-attachrole/">
+           <b> 2.5 </b> Gán IAM role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.6-updaterole/" title="Cập nhật IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.6-updaterole/">
+           <b> 2.6 </b> Cập nhật IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -397,13 +481,13 @@
  
   
     
-    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="" class="dd-item 
+    <li data-nav-id="/vi/5-deploymentpipeline/5.4-accessingthecluster/" title="Truy cập Cluster" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-deploymentpipeline/5.4-accessingthecluster/">
-           <b> 5.4 </b> 
+           <b> 5.4 </b> Truy cập Cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -707,13 +791,13 @@
  
   
     
-    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu add-ons" class="dd-item 
+    <li data-nav-id="/vi/8-deploy/8.1-argocd/" title="Giới thiệu ArgoCD" class="dd-item 
         
         
         
         ">
       <a href="/vi/8-deploy/8.1-argocd/">
-           <b> 7.1 </b> Giới thiệu add-ons
+           <b> 8.1 </b> Giới thiệu ArgoCD
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1014,7 +1098,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/0001.png?featherlight=false&width=90pc"></p>
+<p><img alt="Deployment Pipeline" src="/images/5-deploymentpipeline/5.1-createacluster/001-createacluster.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Thực hiện hoàn thành file <strong>lib/my-eks-blueprints-stack.ts</strong> bằng cách dán(thay thể) đoạn code sau vào file:</li>
 </ol>
@@ -1022,6 +1106,7 @@
 import * as cdk from &#39;aws-cdk-lib&#39;;
 import { Construct } from &#39;constructs&#39;;
 import * as blueprints from &#39;@aws-quickstart/eks-blueprints&#39;;
+import { KubernetesVersion } from &#39;aws-cdk-lib/aws-eks&#39;;
 
 export default class ClusterConstruct extends Construct {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -1031,21 +1116,22 @@ export default class ClusterConstruct extends Construct {
     const region = props?.env?.region!;
 
     const blueprint = blueprints.EksBlueprint.builder()
-    .account(account)
-    .region(region)
-    .addOns()
-    .teams()
-    .build(scope, id+&#34;-stack&#34;);
+      .account(account)
+      .region(region)
+      .clusterProvider(
+        new blueprints.GenericClusterProvider({
+          version: &#39;auto&#39;
+        })
+      )
+      .addOns()
+      .teams()
+      .build(scope, id + &#34;-stack&#34;);
   }
 }
-</code></pre><p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/0002.png?featherlight=false&width=90pc"></p>
-<ol start="3">
-<li>Chúng ta mở file <strong>bin/my-eks-blueprints.ts</strong> để xem code mẫu.</li>
-</ol>
-<p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/0003.png?featherlight=false&width=90pc"></p>
-<ol start="4">
-<li>
-<p>Trong tệp này, chúng ta tạo <strong>CDK Construct</strong> là <strong>building block</strong> của CDK thể hiện những thứ cần thiết để tạo nên các thành phần của <strong>AWS Cloud</strong>.</p>
+</code></pre><p><img alt="Deployment Pipeline" src="/images/5-deploymentpipeline/5.1-createacluster/002-createacluster.png?featherlight=false&width=90pc">
+3.  Chúng ta mở file <strong>bin/my-eks-blueprints.ts</strong> để xem code mẫu.</p>
+<p><img alt="Deployment Pipeline" src="/images/5-deploymentpipeline/5.1-createacluster/003-createacluster.png?featherlight=false&width=90pc">
+4.  Trong tệp này, chúng ta tạo <strong>CDK Construct</strong> là <strong>building block</strong> của CDK thể hiện những thứ cần thiết để tạo nên các thành phần của <strong>AWS Cloud</strong>.</p>
 <ul>
 <li>
 <p>Trong trường hợp của chúng ta, thành phần là EKS cluster blueprint đặt trong <strong>provided account, region, add-ons, teams</strong> (mà chúng ta chưa assign) và tất cả các tài nguyên khác cần thiết để tạo blueprint(ví dụ VPC, subnet,…). Lệnh <strong>build()</strong> ở cuối khởi tạo cluster blueprint.</p>
@@ -1057,12 +1143,10 @@ export default class ClusterConstruct extends Construct {
 <p>Thay thế nội dung của <strong>bin/my-eks-blueprints.ts</strong> bằng <strong>code block</strong> sau.</p>
 </li>
 </ul>
-</li>
-</ol>
 <pre tabindex="0"><code>// bin/my-eks-blueprints.ts
 import * as cdk from &#39;aws-cdk-lib&#39;;
 import ClusterConstruct from &#39;../lib/my-eks-blueprints-stack&#39;;
-
+import * as dotenv from &#39;dotenv&#39;;
 
 const app = new cdk.App();
 const account = process.env.CDK_DEFAULT_ACCOUNT!;
@@ -1070,8 +1154,24 @@ const region = process.env.CDK_DEFAULT_REGION;
 const env = { account, region }
 
 new ClusterConstruct(app, &#39;cluster&#39;, { env });
-</code></pre><p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/0004.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="Deployment Pipeline" src="/images/5-deploymentpipeline/5.1-createacluster/004-createacluster.png?featherlight=false&width=90pc"></p>
 <ol start="5">
+<li>
+<p>Chúng ta tạo mới một file <code>.env</code>
+<img alt="Deployment Pipeline" src="/images/5-deploymentpipeline/5.1-createacluster/005-createacluster.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Thêm biên môi trường vào</p>
+</li>
+</ol>
+<pre tabindex="0"><code>CDK_DEFAULT_ACCOUNT=XXXXX
+CDK_DEFAULT_REGION=XXXX
+</code></pre><p><img alt="Deployment Pipeline" src="/images/5-deploymentpipeline/5.1-createacluster/006-createacluster.png?featherlight=false&width=90pc">
+
+<div class="notices note" ><p>Hãy thay thế bằng <strong>CDK_DEFAULT_ACCOUNT</strong> và <strong>CDK_DEFAULT_REGION</strong> của bạn</p>
+</div>
+</p>
+<ol start="7">
 <li>Tệp import Construct để làm cho nó có sẵn, sau đó sử dụng CDK app để khởi tạo một object mới của CDK Construct mà chúng ta đã import. Kiểm tra <strong>CDK</strong></li>
 </ol>
 <pre tabindex="0"><code>cdk list
@@ -1079,7 +1179,7 @@ new ClusterConstruct(app, &#39;cluster&#39;, { env });
 <li>Nếu không có vấn đề, chúng ta có kết quả sau:</li>
 </ul>
 <pre tabindex="0"><code>cluster-stack
-</code></pre><p><img alt="Deployment Pipeline" src="/images/5-Deploymentpipeline/0005.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="Deployment Pipeline" src="/images/5-deploymentpipeline/5.1-createacluster/007-createacluster.png?featherlight=false&width=90pc"></p>
 <p>Như bạn có thể thấy, chúng ta có thể tận dụng EksBlueprint để xác định cluster của chúng ta một cách dễ dàng bằng cách sử dụng CDK.</p>
 <p>Thay vì triển khai single cluster, chúng ta sẽ tận dụng trình tạo blueprint để thêm deployment pipeline có thể xử lý tất cả các bản cập nhật cho cơ sở hạ tầng của chúng ta cho các môi trường khác nhau.</p>
 
@@ -1150,6 +1250,54 @@ new ClusterConstruct(app, &#39;cluster&#39;, { env });
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1557,19 +1705,19 @@ new ClusterConstruct(app, &#39;cluster&#39;, { env });
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723370292"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723370292"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723370292"></script>
-    <script src="/js/jquery.sticky.js?1723370292"></script>
-    <script src="/js/featherlight.min.js?1723370292"></script>
-    <script src="/js/highlight.pack.js?1723370292"></script>
+    <script src="/js/clipboard.min.js?1723810432"></script>
+    <script src="/js/perfect-scrollbar.min.js?1723810432"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1723810432"></script>
+    <script src="/js/jquery.sticky.js?1723810432"></script>
+    <script src="/js/featherlight.min.js?1723810432"></script>
+    <script src="/js/highlight.pack.js?1723810432"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723370292"></script>
-    <script src="/js/learn.js?1723370292"></script>
-    <script src="/js/hugo-learn.js?1723370292"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1723810432"></script>
+    <script src="/js/learn.js?1723810432"></script>
+    <script src="/js/hugo-learn.js?1723810432"></script>
 
-    <link href="/mermaid/mermaid.css?1723370292" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723370292"></script>
+    <link href="/mermaid/mermaid.css?1723810432" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1723810432"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Create CDK project on AWS System Manager</title>
+    <title>Create CDK Project on AWS System Manager</title>
     <link>//localhost:1313/4-createcdkproject/</link>
-    <description>Recent content in Create CDK project on AWS System Manager</description>
+    <description>Recent content in Create CDK Project on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/4-createcdkproject/index.xml" rel="self" type="application/rss+xml" />

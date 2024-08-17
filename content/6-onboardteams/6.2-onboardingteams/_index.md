@@ -58,7 +58,7 @@ export default class PipelineConstruct extends Construct {
 }
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/001-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/001-onboardingteams.png?featherlight=false&width=90pc)
 
 2.  Push changes to remote repository Github
 
@@ -69,14 +69,14 @@ git commit -m "adding teams"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/002-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/002-onboardingteams.png?featherlight=false&width=90pc)
 
 3.  Wait about 15 minutes for **Succeeded**
 
-![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/003-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/003-onboardingteams.png?featherlight=false&width=90pc)
 
 4.  Successfully deployed
-![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/004-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/004-onboardingteams.png?featherlight=false&width=90pc)
 
 5.  Perform test
 
@@ -86,4 +86,4 @@ kubectl get ns
 
 *   You will notice that **team-burnham** is in **namespace**
 
-![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/005-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/005-onboardingteams.png?featherlight=false&width=90pc)

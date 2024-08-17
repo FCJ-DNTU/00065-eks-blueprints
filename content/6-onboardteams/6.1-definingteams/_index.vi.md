@@ -14,7 +14,7 @@ pre : " <b> 6.1 </b> "
 mkdir teams && cd teams && mkdir platform-team && mkdir application-team
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/001-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/001-definingteams.png?featherlight=false&width=90pc)
 
 2.  Chúng ta sẽ bắt đầu bằng cách tạo một IAM user cho **platform**.
 
@@ -22,7 +22,7 @@ mkdir teams && cd teams && mkdir platform-team && mkdir application-team
 aws iam create-user --user-name platform
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/002-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/002-definingteams.png?featherlight=false&width=90pc)
 
 3.  Tạo một file **index.ts**, dùng để tạo ressource cho **platform-team**
 
@@ -30,7 +30,7 @@ aws iam create-user --user-name platform
 cd platform-team && touch index.ts
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/003-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/003-definingteams.png?featherlight=false&width=90pc)
 
 4.  Tiếp theo chúng ta thêm code block sau vào **index.ts**
 
@@ -57,7 +57,7 @@ Giải thích đoạn code block:
 *   Sau đó, chúng ta chuyển vào hai arugment: name và danh sách IAM user.
     
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/004-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/004-definingteams.png?featherlight=false&width=90pc)
 
 #### Application Team
 
@@ -67,7 +67,7 @@ Giải thích đoạn code block:
 aws iam create-user --user-name application
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/005-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/005-definingteams.png?featherlight=false&width=90pc)
 
 2.  Thay đổi đường dẫn thư mục và tạo file **index.ts**
 
@@ -75,7 +75,7 @@ aws iam create-user --user-name application
 cd ../application-team && touch index.ts
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/006-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/006-definingteams.png?featherlight=false&width=90pc)
 
 3.  Thêm code vào **teams/application-team/index.ts** file
 
@@ -102,7 +102,7 @@ Application Team template sẽ thực hiện những việc sau:
 *   Tạo một role được chia sẻ để truy cập cluster. Ngoài ra, một role hiện có có thể được cung cấp.
 *   Đăng ký role/user được cung cấp trong awsAuth map để truy cập kubectl và bảng điều khiển vào cluster và namespace.
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/007-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/007-definingteams.png?featherlight=false&width=90pc)
 
 4.  Chúng ta sẽ tạo thêm file **index.ts** trong thư mục **team**
 
@@ -110,7 +110,7 @@ Application Team template sẽ thực hiện những việc sau:
 cd .. && touch index.ts
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/008-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/008-definingteams.png?featherlight=false&width=90pc)
 
 5.  Trong file **index.ts** thêm code sau vào:
 
@@ -119,4 +119,4 @@ export { TeamPlatform } from './platform-team';
 export { TeamApplication } from './application-team';
 ```
 
-![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/009-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/009-definingteams.png?featherlight=false&width=90pc)

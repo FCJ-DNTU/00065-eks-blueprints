@@ -53,7 +53,7 @@ export default class PipelineConstruct extends Construct {
 }
 ```
 
-![Add-ons](/images/7-add-ons/7.1-intro/001-intro.png?featherlight=false&width=90pc)
+![Add-ons](/public/images/7-add-ons/7.1-intro/001-intro.png?featherlight=false&width=90pc)
 
 
 2.  If you are new to Cluster Autoscaler, this is a tool that automatically adjusts the number of nodes in your cluster when pods fail due to insufficient resources or pods are rescheduled to other nodes due to failure. used up over a long period. Push your changes to your GitHub repo to start the process.
@@ -64,11 +64,11 @@ git commit -m "adding CA"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
 
-![Add-ons](/images/7-add-ons/7.1-intro/002-intro.png?featherlight=false&width=90pc)
+![Add-ons](/public/images/7-add-ons/7.1-intro/002-intro.png?featherlight=false&width=90pc)
 
 3.  Wait about 15 minutes to complete.
 
-![Add-ons](/images/7-add-ons/7.1-intro/003-intro.png?featherlight=false&width=90pc)
+![Add-ons](/public/images/7-add-ons/7.1-intro/003-intro.png?featherlight=false&width=90pc)
 
 4.  Then run the following command to check **Cluster Autoscaler** is running
 
@@ -76,4 +76,4 @@ git push https://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@github.com/AWS-First-C
 kubectl get pods -n kube-system
 ```
 
-![Add-ons](/images/7-add-ons/7.1-intro/004-intro.png?featherlight=false&width=90pc)
+![Add-ons](/public/images/7-add-ons/7.1-intro/004-intro.png?featherlight=false&width=90pc)

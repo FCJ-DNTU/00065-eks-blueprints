@@ -16,31 +16,31 @@ Refer to how to create [Github Repository](https://docs.github.com/en/get-starte
     *   Select **Public**
     *   Select **Create repository**
 
-![Create Workspace](/images/3-createeksblueprints/001-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/001-createeksblueprints.png?featherlight=false&width=90pc)
 
 2.  After creating **repository** successfully
     
     *   Copy and store **HTTPS** path of **Git repository**
 
-![Create Workspace](/images/3-createeksblueprints/002-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/002-createeksblueprints.png?featherlight=false&width=90pc)
 
 3.  In the **Github** interface we will install and create **token**
     
     *   Select **Avatar** of your **Github** account
     *   Select **Settings**
 
-![Create Workspace](/images/3-createeksblueprints/003-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/003-createeksblueprints.png?featherlight=false&width=90pc)
 
 4.  Then scroll down and select **Developer settings**
 
-![Create Workspace](/images/3-createeksblueprints/004-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/004-createeksblueprints.png?featherlight=false&width=90pc)
 
 5.  In the **Developer settings** interface
     
     *   Select **Personal access tokens**
     *   Select **Generate new token**
 
-![Create Workspace](/images/3-createeksblueprints/005-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/005-createeksblueprints.png?featherlight=false&width=90pc)
 
 6.  In the **Generate new token** interface
     
@@ -48,16 +48,16 @@ Refer to how to create [Github Repository](https://docs.github.com/en/get-starte
     *   Select the following **scope**: **repo** and **admin:repo\_hook**
     *   Select **Generate token**
 
-![Create Workspace](/images/3-createeksblueprints/006-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/006-createeksblueprints.png?featherlight=false&width=90pc)
 7.  Select **Generate token**
 
-![Create Workspace](/images/3-createeksblueprints/007-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/007-createeksblueprints.png?featherlight=false&width=90pc)
 
 8.  Complete **Generate token**
     
     *   Copy and store **token**
 
-![Create Workspace](/images/3-createeksblueprints/008-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/008-createeksblueprints.png?featherlight=false&width=90pc)
 
 Refer to how to create [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
@@ -67,7 +67,7 @@ sudo dnf install git -y
 git --version
 ```
 
-![Create Workspace](/images/3-createeksblueprints/009-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/009-createeksblueprints.png?featherlight=false&width=90pc)
 
 10.  Do a clone **repository**
 
@@ -75,4 +75,4 @@ git --version
 git clone https://github.com/<your-alias>/my-eks-blueprints.git
 ```
 
-![Create Workspace](/images/3-createeksblueprints/010-createeksblueprints.png?featherlight=false&width=90pc)
+![Create Workspace](/public/images/3-createeksblueprints/010-createeksblueprints.png?featherlight=false&width=90pc)

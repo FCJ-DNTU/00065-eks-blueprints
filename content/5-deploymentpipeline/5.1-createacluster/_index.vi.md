@@ -17,7 +17,7 @@ Bạn có thể tìm hiểu thêm về [Amazon EKS Blueprints for CDK](https://w
     *   Mở file **lib/my-eks-blueprints-stack.ts**
     *   Xem các code mẫu trong file
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/001-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/001-createacluster.png?featherlight=false&width=90pc)
 
 2.  Thực hiện hoàn thành file **lib/my-eks-blueprints-stack.ts** bằng cách dán(thay thể) đoạn code sau vào file:
 
@@ -50,10 +50,10 @@ export default class ClusterConstruct extends Construct {
 }
 ```
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/002-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/002-createacluster.png?featherlight=false&width=90pc)
 3.  Chúng ta mở file **bin/my-eks-blueprints.ts** để xem code mẫu.
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/003-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/003-createacluster.png?featherlight=false&width=90pc)
 4.  Trong tệp này, chúng ta tạo **CDK Construct** là **building block** của CDK thể hiện những thứ cần thiết để tạo nên các thành phần của **AWS Cloud**.
     
 *   Trong trường hợp của chúng ta, thành phần là EKS cluster blueprint đặt trong **provided account, region, add-ons, teams** (mà chúng ta chưa assign) và tất cả các tài nguyên khác cần thiết để tạo blueprint(ví dụ VPC, subnet,…). Lệnh **build()** ở cuối khởi tạo cluster blueprint.
@@ -77,17 +77,17 @@ const env = { account, region }
 new ClusterConstruct(app, 'cluster', { env });
 ```
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/004-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/004-createacluster.png?featherlight=false&width=90pc)
 
 5. Chúng ta tạo mới một file `.env`
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/005-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/005-createacluster.png?featherlight=false&width=90pc)
 
 6. Thêm biên môi trường vào 
 ```
 CDK_DEFAULT_ACCOUNT=XXXXX
 CDK_DEFAULT_REGION=XXXX
 ```
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/006-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/006-createacluster.png?featherlight=false&width=90pc)
 {{% notice note %}}
 Hãy thay thế bằng **CDK_DEFAULT_ACCOUNT** và **CDK_DEFAULT_REGION** của bạn
 {{% /notice %}}
@@ -105,7 +105,7 @@ cdk list
 cluster-stack
 ```
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/007-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/007-createacluster.png?featherlight=false&width=90pc)
 
 Như bạn có thể thấy, chúng ta có thể tận dụng EksBlueprint để xác định cluster của chúng ta một cách dễ dàng bằng cách sử dụng CDK.
 

@@ -9,11 +9,11 @@ chapter : false
 
 #### Sơ đồ kiến trúc
 
-![ConnectPrivate](/images/1-introduce/0001-introduce.png)
+![ConnectPrivate](/public/images/1-introduce/0001-introduce.png)
 
 #### Khái niệm cốt lõi
 
-![ConnectPrivate](/images/1-introduce/0002-introduce.png)
+![ConnectPrivate](/public/images/1-introduce/0002-introduce.png)
 
 | Concepts          | Description                                                                                                                                              |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,7 +26,7 @@ chapter : false
 
 #### Blueprint
 
-![ConnectPrivate](/images/1-introduce/0003-introduce.png)
+![ConnectPrivate](/public/images/1-introduce/0003-introduce.png)
 
 EKS Blueprints cho phép bạn định cấu hình và triển khai những gì gọi là blueprint cluster. Blueprint kết hợp các cluster, tiện ích bổ sung và nhóm thành một đối tượng gắn kết có thể được triển khai tổng thể. Sau khi blueprint được định cấu hình, nó có thể được triển khai dễ dàng trên bất kỳ số lượng tài khoản AWS và khu vực nào. Blueprints cũng tận dụng công cụ GitOps để tạo điều kiện khởi động cluster và tích hợp workload.
 

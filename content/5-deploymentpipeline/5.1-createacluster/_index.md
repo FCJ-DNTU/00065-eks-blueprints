@@ -17,7 +17,7 @@ You can learn more about [Amazon EKS Blueprints for CDK](https://www.npmjs.com/p
     *   Open the file **lib/my-eks-blueprints-stack.ts**
     *   See the sample code in the file
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/001-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/001-createacluster.png?featherlight=false&width=90pc)
 
 2.  Complete the **lib/my-eks-blueprints-stack.ts** file by pasting (replacing) the following code into the file:
 
@@ -50,11 +50,11 @@ export default class ClusterConstruct extends Construct {
 }
 ```
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/002-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/002-createacluster.png?featherlight=false&width=90pc)
 
 3.  Open the file **bin/my-eks-blueprints.ts** to review the sample code.
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/003-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/003-createacluster.png?featherlight=false&width=90pc)
 
 4.  In this file, we create a **CDK Construct**, which is a **building block** of CDK representing what is necessary to create components of **AWS Cloud**.
     
@@ -79,11 +79,11 @@ const env = { account, region }
 new ClusterConstruct(app, 'cluster', { env });
 ```
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/004-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/004-createacluster.png?featherlight=false&width=90pc)
 
 5.  Create a new **.env** file.
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/005-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/005-createacluster.png?featherlight=false&width=90pc)
 
 6.  Add environment variables:
 
@@ -92,7 +92,7 @@ CDK_DEFAULT_ACCOUNT=XXXXX
 CDK_DEFAULT_REGION=XXXX
 ```
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/006-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/006-createacluster.png?featherlight=false&width=90pc)
 
 {{% notice note %}} 
 Please replace **CDK\_DEFAULT\_ACCOUNT** and **CDK\_DEFAULT\_REGION** with your own values. {{% /notice %}}
@@ -110,7 +110,7 @@ cdk list
 cluster-stack
 ```
 
-![Deployment Pipeline](/images/5-deploymentpipeline/5.1-createacluster/007-createacluster.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/public/images/5-deploymentpipeline/5.1-createacluster/007-createacluster.png?featherlight=false&width=90pc)
 
 As you can see, we can leverage EksBlueprint to define our cluster easily using CDK.
 

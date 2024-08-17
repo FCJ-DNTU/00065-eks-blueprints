@@ -26,7 +26,7 @@ ArgoCD aligns well with the principles that define the value proposition of usin
 *   Flexibility in how Kubernetes manifests are defined and managed
 *   Argo CD automates the deployment of desired application states in specified target environments. Application deployments can track updates to branches, tags, or be pinned to a specific manifest version at a Git commit.
 
-![Create Workspace](/public/images/8-deploy/8.1-argocd/001-argocd.png?featherlight=false&width=50pc)
+![Create Workspace](/images/8-deploy/8.1-argocd/001-argocd.png?featherlight=false&width=50pc)
 
 Argo CD is implemented as a Kubernetes controller that continuously monitors running applications and compares the current, live state with the desired target state (as specified in the Git repo). Deployed applications whose state directly deviates from the target state is considered out of sync. Argo CD reports & visualizes discrepancies, and provides means to automatically or manually synchronize live state back to the desired target state. Any modifications made to the desired target state in the Git repository can be automatically applied and reflected in the specified target environments.
 

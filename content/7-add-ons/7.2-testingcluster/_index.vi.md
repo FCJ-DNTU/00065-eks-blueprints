@@ -21,7 +21,7 @@ Triển khai một ứng dụng mẫu dưới dạng triển khai. Mở rộng q
 kubectl get nodes
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/001-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/001-testingcluster.png?featherlight=false&width=90pc)
 
 2.  Thực hiện tạo sample nginx application
 
@@ -65,7 +65,7 @@ Cuối cùng apply file nginx.yaml
 kubectl apply -f ~/environment/nginx.yaml
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/002-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/002-testingcluster.png?featherlight=false&width=90pc)
 
 3.  Kiểm tra pod đang chạy
 
@@ -73,7 +73,7 @@ kubectl apply -f ~/environment/nginx.yaml
 kubectl get pod -l app=nginx
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/003-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/003-testingcluster.png?featherlight=false&width=90pc)
 
 4.  Thực hiện **Scale deployment replicas**
 
@@ -83,7 +83,7 @@ kubectl get pod -l app=nginx
 kubectl scale --replicas=10 deployment/nginx-to-scaleout
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/004-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/004-testingcluster.png?featherlight=false&width=90pc)
 
 5.  Tiếp đến ta thực hiện **Monitoring the scaling event**
 
@@ -92,7 +92,7 @@ kubectl scale --replicas=10 deployment/nginx-to-scaleout
 ```
 kubectl get pods -l app=nginx -o wide --watch
 ```
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/005-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/005-testingcluster.png?featherlight=false&width=90pc)
 
 6.  Để xem cluster-autoscaler log
 
@@ -100,7 +100,7 @@ kubectl get pods -l app=nginx -o wide --watch
 kubectl -n kube-system logs -f deployment/blueprints-addon-cluster-autoscaler-aws-cluster-autoscaler
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/006-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/006-testingcluster.png?featherlight=false&width=90pc)
 
 7.  Bạn có thể liệt kê tất cả các node
 
@@ -108,7 +108,7 @@ kubectl -n kube-system logs -f deployment/blueprints-addon-cluster-autoscaler-aw
 kubectl get nodes
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/007-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/007-testingcluster.png?featherlight=false&width=90pc)
 
 8.  Để xóa tài nguyên thực hiện
 
@@ -117,4 +117,4 @@ kubectl delete deploy nginx-to-scaleout
 rm ~/environment/nginx.yaml
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/008-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/008-testingcluster.png?featherlight=false&width=90pc)

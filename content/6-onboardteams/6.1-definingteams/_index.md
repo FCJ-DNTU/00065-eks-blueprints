@@ -14,7 +14,7 @@ pre : " <b> 6.1 </b> "
 mkdir teams && cd teams && mkdir platform-team && mkdir application-team
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/001-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/001-definingteams.png?featherlight=false&width=90pc)
 
 2.  We’ll start by creating an IAM user for **platform**.
 
@@ -22,7 +22,7 @@ mkdir teams && cd teams && mkdir platform-team && mkdir application-team
 aws iam create-user --user-name platform
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/002-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/002-definingteams.png?featherlight=false&width=90pc)
 
 3.  Create a file **index.ts**, used to create resources for **platform-team**
 
@@ -30,7 +30,7 @@ aws iam create-user --user-name platform
 cd platform-team && touch index.ts
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/003-definingteams.png?featherlight=false&width=90pc)c)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/003-definingteams.png?featherlight=false&width=90pc)c)
 
 4.  Next we add the following code block to **index.ts**
 
@@ -57,7 +57,7 @@ Explanation of the code block:
 *   Then we pass in two arguments: name and list of IAM users.
     
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/004-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/004-definingteams.png?featherlight=false&width=90pc)
 
 #### Application Team
 
@@ -67,7 +67,7 @@ Explanation of the code block:
 aws iam create-user --user-name application
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/005-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/005-definingteams.png?featherlight=false&width=90pc)
 
 2.  Change directory path and create file **index.ts**
 
@@ -75,7 +75,7 @@ aws iam create-user --user-name application
 cd ../application-team && touch index.ts
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/006-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/006-definingteams.png?featherlight=false&width=90pc)
 
 3.  Add code to **teams/application-team/index.ts** file
 
@@ -102,7 +102,7 @@ The Application Team template will do the following things:
 *   Create a shared role to access the cluster. Alternatively, an existing role can be provisioned.
 *   Register the role/user provided in the awsAuth map for kubectl and dashboard access to the cluster and namespace.
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/007-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/007-definingteams.png?featherlight=false&width=90pc)
 
 4.  We will create an additional file **index.ts** in the **team** folder
 
@@ -110,7 +110,7 @@ The Application Team template will do the following things:
 cd .. && touch index.ts
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/008-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/008-definingteams.png?featherlight=false&width=90pc)
 
 5.  In the file **index.ts** add the following code:
 
@@ -119,4 +119,4 @@ export { TeamPlatform } from './platform-team';
 export { TeamApplication } from './application-team';
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.1-definingteams/009-definingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.1-definingteams/009-definingteams.png?featherlight=false&width=90pc)

@@ -19,7 +19,7 @@ sudo curl --silent --location -o /usr/local/bin/kubectl \
 sudo chmod +x /usr/local/bin/kubectl
 ```
 
-![Create Workspace](/public/images/2-prerequiste/2.3-installtool/000-installtool.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.3-installtool/000-installtool.png?featherlight=false&width=90pc)
 Các bạn có thể xem thêm cài đặt [kubectl trên AWS](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 
 2.  Cập nhật awscli
@@ -30,7 +30,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-![Create Workspace](/public/images/2-prerequiste/2.3-installtool/002-installtool.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.3-installtool/002-installtool.png?featherlight=false&width=90pc)
 
 3.  Chúng ta thực hiện xác thực.
 
@@ -41,7 +41,7 @@ for command in kubectl jq envsubst aws
   done
 ```
 
-![Create Workspace](/public/images/2-prerequiste/2.3-installtool/003-installtool.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.3-installtool/003-installtool.png?featherlight=false&width=90pc)
 
 4.  Kích hoạt **kubectl bash\_completion**
 
@@ -50,4 +50,4 @@ kubectl completion bash >>  ~/.bash_completion
 . /etc/profile.d/bash_completion.sh
 . ~/.bash_completion
 ```
-![Create Workspace](/public/images/2-prerequiste/2.3-installtool/004-installtool.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.3-installtool/004-installtool.png?featherlight=false&width=90pc)

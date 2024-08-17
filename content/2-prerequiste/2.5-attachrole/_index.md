@@ -12,7 +12,7 @@ pre : " <b> 2.5 </b> "
     
     *   Search for **EC2** and select **Instance**
     
-    ![Create Workspace](/public/images/2-prerequiste/2.5-attachrole/001-attachrole.png?featherlight=false&width=90pc)
+    ![Create Workspace](/images/2-prerequiste/2.5-attachrole/001-attachrole.png?featherlight=false&width=90pc)
     
 2.  **In the EC2 instance interface**
     
@@ -21,11 +21,11 @@ pre : " <b> 2.5 </b> "
     *   Select **Security**
     *   Click on **Modify IAM role**
     
-    ![Create Workspace](/public/images/2-prerequiste/2.5-attachrole/002-attachrole.png?featherlight=false&width=90pc)
+    ![Create Workspace](/images/2-prerequiste/2.5-attachrole/002-attachrole.png?featherlight=false&width=90pc)
     
 3.  **In the Modify IAM role interface**
     
     *   Choose the **eks-blueprints-cdk-workshop-admin** role
     *   Click **Update IAM role**
     
-    ![Create Workspace](/public/images/2-prerequiste/2.5-attachrole/003-attachrole.png?featherlight=false&width=90pc)
+    ![Create Workspace](/images/2-prerequiste/2.5-attachrole/003-attachrole.png?featherlight=false&width=90pc)

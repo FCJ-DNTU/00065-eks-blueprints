@@ -9,11 +9,11 @@ chapter: false
 
 #### Architecture Diagram
 
-![ConnectPrivate](/public/images/1-introduce/0001-introduce.png)
+![ConnectPrivate](/images/1-introduce/0001-introduce.png)
 
 #### Core Concepts
 
-![ConnectPrivate](/public/images/1-introduce/0002-introduce.png)
+![ConnectPrivate](/images/1-introduce/0002-introduce.png)
 
 | Concepts | Description |
 | --- | --- |
@@ -26,7 +26,7 @@ chapter: false
 
 #### Blueprint
 
-![ConnectPrivate](/public/images/1-introduce/0003-introduce.png)
+![ConnectPrivate](/images/1-introduce/0003-introduce.png)
 
 EKS Blueprints allow you to configure and deploy what is known as a blueprint cluster. A blueprint combines clusters, add-ons, and teams into a cohesive object that can be deployed as a whole. Once the blueprint is configured, it can be easily deployed across any number of AWS accounts and regions. Blueprints also leverage GitOps tools to facilitate cluster bootstrapping and workload integration.
 

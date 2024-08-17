@@ -29,7 +29,7 @@ ArgoCD phù hợp tốt với các nguyên tắc xác định đề xuất giá 
 *   Tính linh hoạt về cách Kubernetes biểu hiện được xác định và quản lý
 *   Argo CD tự động hóa việc triển khai các trạng thái ứng dụng mong muốn trong các môi trường đích được chỉ định. Việc triển khai ứng dụng có thể theo dõi các bản cập nhật cho các nhánh, thẻ hoặc được ghim vào một phiên bản tệp kê khai cụ thể tại một cam kết Git.
 
-![Create Workspace](/public/images/8-deploy/8.1-argocd/001-argocd.png?featherlight=false&width=50pc)
+![Create Workspace](/images/8-deploy/8.1-argocd/001-argocd.png?featherlight=false&width=50pc)
 
 Argo CD được thực hiện như một bộ điều khiển Kubernetes liên tục theo dõi các ứng dụng đang chạy và so sánh trạng thái hiện tại, trực tiếp với trạng thái mục tiêu mong muốn (như được chỉ định trong Git repo). Ứng dụng đã triển khai có trạng thái trực tiếp lệch khỏi trạng thái đích được coi là OutOfSync. Argo CD báo cáo & trực quan hóa sự khác biệt, đồng thời cung cấp các phương tiện để tự động hoặc thủ công đồng bộ hóa trạng thái trực tiếp trở lại trạng thái mục tiêu mong muốn. Bất kỳ sửa đổi nào được thực hiện đối với trạng thái mục tiêu mong muốn trong kho Git có thể được tự động áp dụng và phản ánh trong các môi trường mục tiêu được chỉ định.
 

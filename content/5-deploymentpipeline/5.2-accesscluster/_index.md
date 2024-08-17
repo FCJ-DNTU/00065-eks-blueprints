@@ -24,7 +24,7 @@ aws secretsmanager create-secret --name "eks-workshop-token" --description "gith
 
 Note: remember to replace your **secret-string** with the token you created.
 
-![Create Workspace](/public/images/5-deploymentpipeline/5.2-accesscluster/001-accesscluster.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/001-accesscluster.png?featherlight=false&width=90pc)
 
 2.  We can create a new **CodePipelineStack** resource by creating a new **CDK Construct** in the **lib/** directory, then importing **Construct** into the main entry point file.
     
@@ -33,7 +33,7 @@ Note: remember to replace your **secret-string** with the token you created.
 ```
 touch lib/pipeline.ts
 ```
-![Create Workspace](/public/images/5-deploymentpipeline/5.2-accesscluster/002-accesscluster.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/002-accesscluster.png?featherlight=false&width=90pc)
 
 
 3.  Once the file is created, open the file and add the following code to create **pipeline construct**
@@ -84,7 +84,7 @@ Make configuration:
 *   **credentialsSecretName**, enter your secret (In the lab, enter **eks-workshop-token**)
 *   **targetRevision**, enter revision **main**
 
-![Create Workspace](/public/images/5-deploymentpipeline/5.2-accesscluster/003-accesscluster.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/003-accesscluster.png?featherlight=false&width=90pc)
 
 
 4.  To make sure we can access **Construct**, we need to import and initialize a new construct.
@@ -110,14 +110,14 @@ new ClusterConstruct(app, 'cluster', { env });
 new PipelineConstruct(app, 'pipeline', { env });
 ```
 
-![Create Workspace](/public/images/5-deploymentpipeline/5.2-accesscluster/004-accesscluster.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/004-accesscluster.png?featherlight=false&width=90pc)
 
 5.  Do a list check **pipeline**
 
 ```
 cdk list
 ```
-![Create Workspace](/public/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)
 
 6.  Do more **Stage**. In this step, we add stages to the pipeline (in the lab using the **dev** stage, you can deploy more stages for **test** and **production** in regions. other)
 
@@ -177,7 +177,7 @@ export default class PipelineConstruct extends Construct {
 *   Our stack will deploy the following clusters: EKS in the dev environment. CodePipeline deploys to the region: ap-southeast-1.
     
 
-![Create Workspace](/public/images/5-deploymentpipeline/5.2-accesscluster/006-accesscluster.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/006-accesscluster.png?featherlight=false&width=90pc)
 
 7.  Perform pipeline list recheck
 
@@ -193,4 +193,4 @@ pipeline-stack
 pipeline-stack/dev/dev-blueprint
 ```
 
-![Create Workspace](/public/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)
+![Create Workspace](/images/5-deploymentpipeline/5.2-accesscluster/005-accesscluster.png?featherlight=false&width=90pc)

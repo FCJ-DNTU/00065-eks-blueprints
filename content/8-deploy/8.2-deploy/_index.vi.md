@@ -122,7 +122,7 @@ export default class PipelineConstruct extends Construct {
 }
 ```
 
-![Add-ons](/public/images/8-deploy/8.2-deploy/001-deploy.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/001-deploy.png?featherlight=false&width=90pc)
 
 2.  Thực hiện push thay đổi lên Github repository
 
@@ -132,11 +132,11 @@ git commit -m "Bootstrapping ArgoCD"
 git push https://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@github.com/FromSunNews/my-eks-blueprints.git
 ```
 
-![Add-ons](/public/images/8-deploy/8.2-deploy/002-deploy.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/002-deploy.png?featherlight=false&width=90pc)
 
 3.  Đợi 15 phút sau sẽ hoàn thành
 
-![Add-ons](/public/images/8-deploy/8.2-deploy/003-deploy.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/003-deploy.png?featherlight=false&width=90pc)
 
 4.  Thực hiện kiểm tra argocd namespace bằng lệnh.
 
@@ -144,4 +144,4 @@ git push https://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@github.com/FromSunNews
 kubectl get ns
 ```
 
-![Add-ons](/public/images/8-deploy/8.2-deploy/004-deploy.png?featherlight=false&width=90pc)
+![Add-ons](/images/8-deploy/8.2-deploy/004-deploy.png?featherlight=false&width=90pc)

@@ -58,7 +58,7 @@ export default class PipelineConstruct extends Construct {
 }
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/001-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/001-onboardingteams.png?featherlight=false&width=90pc)
 
 2.  Thực hiện push thay đổi lên remote repository Github
 
@@ -69,14 +69,14 @@ git commit -m "adding teams"
 git push https://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@github.com/AWS-First-Cloud-Journey/my-eks-blueprints.git
 ```
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/002-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/002-onboardingteams.png?featherlight=false&width=90pc)
 
 3.  Đợi khoảng thời gian khoảng 15 phút sẽ **Succeeded**
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/003-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/003-onboardingteams.png?featherlight=false&width=90pc)
 
 5. Triển khai thành công
-![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/004-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/004-onboardingteams.png?featherlight=false&width=90pc)
 
 
 6.  Thực hiện kiểm tra
@@ -87,4 +87,4 @@ kubectl get ns
 
 *   Bạn sẽ nhận thấy rằng **team-burnham** có trong **namespace**
 
-![Deployment Pipeline](/public/images/6-onboardteams/6.2-onboardingteams/004-onboardingteams.png?featherlight=false&width=90pc)
+![Deployment Pipeline](/images/6-onboardteams/6.2-onboardingteams/004-onboardingteams.png?featherlight=false&width=90pc)

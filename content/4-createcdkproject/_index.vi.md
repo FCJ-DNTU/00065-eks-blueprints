@@ -17,7 +17,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 source ~/.bashrc
 nvm -v
 ```
-![Create Workspace](/public/images/4-createcdkproject/001-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/001-createcdkproject.png?featherlight=false&width=90pc)
 
 2. Sử dụng phiên bản **node 18**
 
@@ -27,11 +27,11 @@ nvm use v18
 node -v
 npm -v
 ```
-![Create Workspace](/public/images/4-createcdkproject/003-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/003-createcdkproject.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
 Bạn cần sử dụng phien bản node trên 14.15.0 để sử dụng được cdk. Xem thêm [tại đây](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html)
-![Create Workspace](/public/images/4-createcdkproject/002-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/002-createcdkproject.png?featherlight=false&width=90pc)
 {{% /notice %}}
 
 
@@ -42,7 +42,7 @@ npm -g install typescript
 npm install -g aws-cdk@2.147.3
 cdk --version
 ```
-![Create Workspace](/public/images/4-createcdkproject/005-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/005-createcdkproject.png?featherlight=false&width=90pc)
 
 
 4. thực hiện tạo CDK project mới sử dụng typescript
@@ -51,15 +51,15 @@ cdk --version
 cdk init app --language typescript
 ```
 
-![Create Workspace](/public/images/4-createcdkproject/006-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/006-createcdkproject.png?featherlight=false&width=90pc)
 
 5.  Trong giao diện **VSCode**
     *   Xem sidebar
     *   Xem cấu trúc của **project**
     *   **lib /** : Đây là nơi các stack hoặc **construct** **CDK project** của bạn được định nghĩa.
-    ![Create Workspace](/public/images/4-createcdkproject/012-createcdkproject.png?featherlight=false&width=90pc)
+    ![Create Workspace](/images/4-createcdkproject/012-createcdkproject.png?featherlight=false&width=90pc)
     *   **bin / my-eks-blueprints.ts** : Đây là **entrypoint** của CDK project. Nó sẽ tải các contructs được định nghĩa trong **lib /** .
-    ![Create Workspace](/public/images/4-createcdkproject/013-createcdkproject.png?featherlight=false&width=90pc)
+    ![Create Workspace](/images/4-createcdkproject/013-createcdkproject.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
 Bạn có thể xem thêm tài liệu về **[CDK](https://docs.aws.amazon.com/cdk/v2/guide/best-practices.html)**
@@ -75,7 +75,7 @@ export ACCOUNT_ID=212454837823
 Lưu ý: nhớ thay đổi **ACCOUNT\_ID** của bạn để thực hiện bài lab.
 {{% /notice %}}
 
-![Create Workspace](/public/images/4-createcdkproject/007-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/007-createcdkproject.png?featherlight=false&width=90pc)
 
 7.  Chúng ta thực hiện khởi tạo **Boostrap account**
     
@@ -93,7 +93,7 @@ cdk bootstrap --trust=$ACCOUNT_ID \
 Environment aws://212454837823/ap-southeast-1 bootstrapped.
 ```
 
-![Create Workspace](/public/images/4-createcdkproject/010-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/010-createcdkproject.png?featherlight=false&width=90pc)
 
 
 8.  Chúng ta tiếp tục chạy lệnh cài đặt module **eks-blueprints** và **dotenv** cho **project**
@@ -102,4 +102,4 @@ Environment aws://212454837823/ap-southeast-1 bootstrapped.
 npm i @aws-quickstart/eks-blueprints dotenv
 ```
 
-![Create Workspace](/public/images/4-createcdkproject/011-createcdkproject.png?featherlight=false&width=90pc)
+![Create Workspace](/images/4-createcdkproject/011-createcdkproject.png?featherlight=false&width=90pc)

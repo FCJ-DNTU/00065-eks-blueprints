@@ -22,7 +22,7 @@ Deploy a sample application as a deployment. Scale deployment to 50. Scaling eve
 kubectl get nodes
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/001-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/001-testingcluster.png?featherlight=false&width=90pc)
 
 2.  Make sample nginx application
 Create a directory and a file named nginx.yaml:
@@ -65,7 +65,7 @@ Finally, apply the nginx.yaml file:
 kubectl apply -f ~/environment/nginx.yaml
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/002-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/002-testingcluster.png?featherlight=false&width=90pc)
 
 3.  Check the pod is running
 
@@ -73,7 +73,7 @@ kubectl apply -f ~/environment/nginx.yaml
 kubectl get pod -l app=nginx
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/003-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/003-testingcluster.png?featherlight=false&width=90pc)
 
 4.  Implement **Scale deployment replicas**
 
@@ -83,7 +83,7 @@ kubectl get pod -l app=nginx
 kubectl scale --replicas=10 deployment/nginx-to-scaleout
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/004-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/004-testingcluster.png?featherlight=false&width=90pc)
 
 5.  Next we do **Monitoring the scaling event**
 
@@ -93,7 +93,7 @@ kubectl scale --replicas=10 deployment/nginx-to-scaleout
 kubectl get pods -l app=nginx -o wide --watch
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/005-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/005-testingcluster.png?featherlight=false&width=90pc)
 
 6.  To view the cluster-autoscaler log
 
@@ -101,7 +101,7 @@ kubectl get pods -l app=nginx -o wide --watch
 kubectl -n kube-system logs -f deployment/blueprints-addon-cluster-autoscaler-aws-cluster-autoscaler
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/006-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/006-testingcluster.png?featherlight=false&width=90pc)
 
 7.  You can list all the nodes
 
@@ -109,7 +109,7 @@ kubectl -n kube-system logs -f deployment/blueprints-addon-cluster-autoscaler-aw
 kubectl get nodes
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/007-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/007-testingcluster.png?featherlight=false&width=90pc)
 
 8.  To delete the execution resource
 
@@ -118,4 +118,4 @@ kubectl delete deploy nginx-to-scaleout
 rm ~/environment/nginx.yaml
 ```
 
-![Add-ons](/public/images/7-add-ons/7.2-testingcluster/008-testingcluster.png?featherlight=false&width=90pc)
+![Add-ons](/images/7-add-ons/7.2-testingcluster/008-testingcluster.png?featherlight=false&width=90pc)

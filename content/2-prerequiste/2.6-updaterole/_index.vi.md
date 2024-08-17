@@ -15,7 +15,7 @@ export ACCOUNT_ID=xxx
 export AWS_REGION=xxx
 ```
 
-![Create Workspace](/public/images/2-prerequiste/2.6-updaterole/004-updaterole.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.6-updaterole/004-updaterole.png?featherlight=false&width=90pc)
 
 2.  Kiểm tra **AWS\_REGION**
 
@@ -23,7 +23,7 @@ export AWS_REGION=xxx
 test -n "$AWS_REGION" && echo AWS_REGION is "$AWS_REGION" || echo AWS_REGION is not set
 ```
 
-![Create Workspace](/public/images/2-prerequiste/2.6-updaterole/005-updaterole.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.6-updaterole/005-updaterole.png?featherlight=false&width=90pc)
 
 3.  Lưu lại vào **bash\_profile**
 
@@ -34,7 +34,7 @@ aws configure set default.region ${AWS_REGION}
 aws configure get default.region
 ```
 
-![Create Workspace](/public/images/2-prerequiste/2.6-updaterole/006-updaterole.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.6-updaterole/006-updaterole.png?featherlight=false&width=90pc)
 
 4.  Xác thực **IAM role**
 
@@ -42,6 +42,6 @@ aws configure get default.region
 aws sts get-caller-identity --query Arn | grep eks-blueprints-cdk-workshop-admin -q && echo "IAM role valid" || echo "IAM role NOT valid"
 ```
 
-![Create Workspace](/public/images/2-prerequiste/2.6-updaterole/007-updaterole.png?featherlight=false&width=90pc)
+![Create Workspace](/images/2-prerequiste/2.6-updaterole/007-updaterole.png?featherlight=false&width=90pc)
 
 Nếu kết quả là IAM role NOT valid, hãy kiểm tra lại các bước trước xem thông tin IAM role bạn tạo và gán vào Cloud9 Workspace có chính xác không nhé.

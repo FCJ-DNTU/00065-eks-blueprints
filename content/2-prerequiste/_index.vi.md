@@ -14,9 +14,10 @@ pre : " <b> 2. </b> "
 
 #### Nội dung
 
-1.  [Tạo môi trường Cloud9](2.1-createworkspace/)
-2.  [Cài đặt công cụ](2.2-installtool/)
-3.  [Tạo IAM role](2.3-createiamrole/)
-4.  [Gán IAM role cho Cloud9 instance](2.4-attachrole/)
-5.  [Cập nhật IAM role](2.5-updateiamrole/)
+1.  [Tạo VPC và EC2 Instance](2.1-createvpcec2/)
+2.  [Kết nối với EC2 Instance](2.2-connectec2/)
+3.  [Cài đặt các cộng cụ](2.3-installtool/)
+4.  [Tạo IAM Role](2.4-createrole/)
+5.  [Gán IAM Role](2.5-attachrole/)
+6.  [Cập nhật IAM Role](2.6-updaterole/)
   

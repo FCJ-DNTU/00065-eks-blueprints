@@ -13,8 +13,9 @@ Also, install Kubernetes Tool
 
 #### Content
 
-1.  [Create Environment Cloud9](2.1-createworkspace/)
-2.  [Install Tool](2.2-installtool/)
-3.  [Create IAM role](2.3-createiamrole/)
-4.  [Assign IAM role to Cloud9 instance](2.4-attachrole/)
-5.  [Update IAM role](2.5-updateiamrole/)
+1.  [Create VPC and EC2 Instance](2.1-createvpcec2/)
+2.  [Connect to EC2 Instance](2.2-connectec2/)
+3.  [Install Tools](2.3-installtool/)
+4.  [Create IAM Role](2.4-createrole/)
+5.  [Attach IAM Role](2.5-attachrole/)
+6.  [Update IAM Role](2.6-updaterole/)

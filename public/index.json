@@ -81,7 +81,7 @@
 	"title": "Preparation",
 	"tags": [],
 	"description": "",
-	"content": "Preparation To conduct the lab, we have to prepare the Cloud9 environment and create the IAM role for the Cloud9 instance.\nAlso, install Kubernetes Tool\nContent Create Environment Cloud9 Install Tool Create IAM role Assign IAM role to Cloud9 instance Update IAM role "
+	"content": "Preparation To conduct the lab, we have to prepare the Cloud9 environment and create the IAM role for the Cloud9 instance.\nAlso, install Kubernetes Tool\nContent Create VPC and EC2 Instance Connect to EC2 Instance Install Tools Create IAM Role Attach IAM Role Update IAM Role "
 },
 {
 	"uri": "//localhost:1313/7-add-ons/7.2-testingcluster/",

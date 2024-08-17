@@ -60,7 +60,7 @@
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
-	"content": "Các bước chuẩn bị Để tiến hành bài lab, chúng ta phải chuẩn bị môi trường Cloud9 và tạo IAM role cho Cloud9 instance.\nĐồng thời cài đặt Kubernetes Tool\nNội dung Tạo môi trường Cloud9 Cài đặt công cụ Tạo IAM role Gán IAM role cho Cloud9 instance Cập nhật IAM role "
+	"content": "Các bước chuẩn bị Để tiến hành bài lab, chúng ta phải chuẩn bị môi trường Cloud9 và tạo IAM role cho Cloud9 instance.\nĐồng thời cài đặt Kubernetes Tool\nNội dung Tạo VPC và EC2 Instance Kết nối với EC2 Instance Cài đặt các cộng cụ Tạo IAM Role Gán IAM Role Cập nhật IAM Role "
 },
 {
 	"uri": "//localhost:1313/vi/6-onboardteams/6.2-onboardingteams/",
@@ -151,7 +151,7 @@
 	"title": "Truy cập Cluster",
 	"tags": [],
 	"description": "",
-	"content": "Truy cập Cluster Truy cập Cluster Cài đặt quyền truy cập vào cluster export KUBE_CONFIG=$(aws cloudformation describe-stacks --stack-name dev-dev-blueprint | jq -r \u0026#39;.Stacks[0].Outputs[] | select(.OutputKey|match(\u0026#34;ConfigCommand\u0026#34;))| .OutputValue\u0026#39;)\r$KUBE_CONFIG Khi kubeconfig đã được cập nhật, bạn sẽ có thể truy cập vào EKS cluster kubectl get svc "
+	"content": "Truy cập Cluster Cài đặt quyền truy cập vào cluster export KUBE_CONFIG=$(aws cloudformation describe-stacks --stack-name dev-dev-blueprint | jq -r \u0026#39;.Stacks[0].Outputs[] | select(.OutputKey|match(\u0026#34;ConfigCommand\u0026#34;))| .OutputValue\u0026#39;)\r$KUBE_CONFIG Khi kubeconfig đã được cập nhật, bạn sẽ có thể truy cập vào EKS cluster kubectl get svc "
 },
 {
 	"uri": "//localhost:1313/vi/2-prerequiste/2.5-attachrole/",
